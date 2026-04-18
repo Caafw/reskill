@@ -1,0 +1,2153 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2639
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 LucidaGrande;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+<meta charset="UTF-8">\
+<meta name="viewport" content="width=device-width, initial-scale=1.0">\
+<title>Course Builder \'97 Centre for Applied AI & Future of Work</title>\
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">\
+<style>\
+:root \{\
+  --ink:        #1a1a1a;\
+  --ink-light:  #3d3d3d;\
+  --ink-faint:  #7a7a7a;\
+  --paper:      #faf8f4;\
+  --paper-warm: #f4f1eb;\
+  --paper-deep: #ede9e0;\
+  --rule:\'a0      #d4cfc4;\
+  --rule-light: #e8e4db;\
+  --oxford:\'a0    #002147;\
+  --oxford-mid: #003166;\
+  --accent:\'a0    #8b1a1a;\
+  --accent-mid: #a52020;\
+  --code-bg:    #f0ede6;\
+  --serif:      'EB Garamond', 'Libre Baskerville', Georgia, serif;\
+  --sans:\'a0      'Source Sans 3', 'Helvetica Neue', sans-serif;\
+\}\
+\
+*, *::before, *::after \{ box-sizing: border-box; margin: 0; padding: 0; \}\
+\
+html \{ font-size: 16px; \}\
+\
+body \{\
+  background: var(--paper);\
+  color: var(--ink);\
+  font-family: var(--sans);\
+  font-size: 15px;\
+  line-height: 1.65;\
+  min-height: 100vh;\
+\}\
+\
+/* \uc0\u9472 \u9472  HEADER \u9472 \u9472  */\
+header \{\
+  background: var(--oxford);\
+  color: #ffffff;\
+  padding: 0 48px;\
+  display: flex;\
+  align-items: center;\
+  justify-content: space-between;\
+  height: 56px;\
+  border-bottom: 3px solid var(--accent);\
+  position: sticky;\
+  top: 0;\
+  z-index: 100;\
+\}\
+\
+.logo-wordmark \{\
+  font-family: var(--serif);\
+  font-size: 14px;\
+  letter-spacing: 0.02em;\
+  color: #ffffff;\
+  line-height: 1.3;\
+\}\
+.logo-wordmark span \{\
+  display: block;\
+  font-size: 10px;\
+  font-family: var(--sans);\
+  font-weight: 300;\
+  letter-spacing: 0.14em;\
+  text-transform: uppercase;\
+  color: rgba(255,255,255,0.55);\
+  margin-top: 1px;\
+\}\
+\
+.header-nav \{\
+  display: flex;\
+  align-items: center;\
+  gap: 28px;\
+\}\
+.header-nav a \{\
+  font-family: var(--sans);\
+  font-size: 12px;\
+  font-weight: 400;\
+  letter-spacing: 0.08em;\
+  text-transform: uppercase;\
+  color: rgba(255,255,255,0.6);\
+  text-decoration: none;\
+  transition: color 0.2s;\
+\}\
+.header-nav a:hover \{ color: #ffffff; \}\
+.header-nav .nav-pill \{\
+  font-size: 11px;\
+  letter-spacing: 0.08em;\
+  text-transform: uppercase;\
+  color: var(--oxford);\
+  background: rgba(255,255,255,0.92);\
+  padding: 4px 14px;\
+  font-weight: 600;\
+\}\
+\
+/* \uc0\u9472 \u9472  PROGRESS RULE \u9472 \u9472  */\
+.progress-rule \{\
+  background: var(--paper-warm);\
+  border-bottom: 1px solid var(--rule);\
+  padding: 0 48px;\
+  display: flex;\
+  align-items: stretch;\
+\}\
+.prog-step \{\
+  flex: 1;\
+  padding: 12px 0 10px;\
+  font-family: var(--sans);\
+  font-size: 11px;\
+  font-weight: 400;\
+  letter-spacing: 0.1em;\
+  text-transform: uppercase;\
+  color: var(--ink-faint);\
+  text-align: center;\
+  border-right: 1px solid var(--rule-light);\
+  position: relative;\
+  transition: color 0.2s;\
+\}\
+.prog-step:last-child \{ border-right: none; \}\
+.prog-step .p-num \{\
+  display: block;\
+  font-size: 9px;\
+  letter-spacing: 0.14em;\
+  color: var(--ink-faint);\
+  margin-bottom: 3px;\
+\}\
+.prog-step.active \{\
+  color: var(--oxford);\
+  background: var(--paper);\
+\}\
+.prog-step.active .p-num \{ color: var(--oxford); \}\
+.prog-step.active::after \{\
+  content: '';\
+  position: absolute;\
+  bottom: -1px; left: 0; right: 0;\
+  height: 2px;\
+  background: var(--oxford);\
+\}\
+.prog-step.done \{ color: var(--ink-faint); \}\
+.prog-step.done .p-label::after \{\
+  content: '\'a0
+\f1 \uc0\u10003 
+\f0 ';\
+  color: var(--accent);\
+  font-size: 10px;\
+\}\
+\
+/* \uc0\u9472 \u9472  MAIN LAYOUT \u9472 \u9472  */\
+main \{\
+  max-width: 780px;\
+  margin: 0 auto;\
+  padding: 64px 48px 100px;\
+\}\
+\
+/* \uc0\u9472 \u9472  SCREENS \u9472 \u9472  */\
+.screen \{ display: none; animation: appear 0.3s ease; \}\
+.screen.active \{ display: block; \}\
+@keyframes appear \{ from \{ opacity: 0; transform: translateY(10px); \} to \{ opacity: 1; transform: translateY(0); \} \}\
+\
+/* \uc0\u9472 \u9472  TYPOGRAPHY \u9472 \u9472  */\
+.section-rule \{\
+  font-family: var(--sans);\
+  font-size: 10px;\
+  font-weight: 600;\
+  letter-spacing: 0.2em;\
+  text-transform: uppercase;\
+  color: var(--oxford);\
+  display: flex;\
+  align-items: center;\
+  gap: 14px;\
+  margin-bottom: 24px;\
+\}\
+.section-rule::after \{\
+  content: '';\
+  flex: 1;\
+  height: 1px;\
+  background: var(--oxford);\
+  opacity: 0.2;\
+\}\
+\
+h1 \{\
+  font-family: var(--serif);\
+  font-size: clamp(28px, 3.5vw, 42px);\
+  font-weight: 400;\
+  line-height: 1.15;\
+  color: var(--oxford);\
+  margin-bottom: 16px;\
+  letter-spacing: -0.01em;\
+\}\
+h1 em \{ font-style: italic; color: var(--accent); \}\
+\
+.lead \{\
+  font-family: var(--serif);\
+  font-size: 17px;\
+  font-weight: 400;\
+  line-height: 1.7;\
+  color: var(--ink-light);\
+  max-width: 620px;\
+  margin-bottom: 40px;\
+  font-style: italic;\
+\}\
+\
+/* \uc0\u9472 \u9472  FIELD ELEMENTS \u9472 \u9472  */\
+.field-group \{ margin-bottom: 28px; \}\
+.field-label \{\
+  display: block;\
+  font-family: var(--sans);\
+  font-size: 11px;\
+  font-weight: 600;\
+  letter-spacing: 0.12em;\
+  text-transform: uppercase;\
+  color: var(--ink-light);\
+  margin-bottom: 8px;\
+\}\
+\
+input[type="text"], textarea, select \{\
+  width: 100%;\
+  background: #ffffff;\
+  border: 1px solid var(--rule);\
+  border-bottom: 2px solid var(--rule);\
+  color: var(--ink);\
+  font-family: var(--sans);\
+  font-size: 15px;\
+  padding: 11px 14px;\
+  outline: none;\
+  border-radius: 0;\
+  transition: border-color 0.2s;\
+  appearance: none;\
+  -webkit-appearance: none;\
+\}\
+input[type="text"]:focus, textarea:focus, select:focus \{\
+  border-color: var(--oxford);\
+  border-bottom-color: var(--oxford);\
+\}\
+textarea \{ resize: vertical; min-height: 80px; \}\
+select \{\
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%237a7a7a'/%3E%3C/svg%3E");\
+  background-repeat: no-repeat;\
+  background-position: right 14px center;\
+  padding-right: 36px;\
+  cursor: pointer;\
+\}\
+select option \{ background: #fff; \}\
+\
+/* \uc0\u9472 \u9472  TOPIC CHIPS \u9472 \u9472  */\
+.chip-category \{ margin-bottom: 20px; \}\
+.chip-cat-label \{\
+  font-family: var(--sans);\
+  font-size: 10px;\
+  font-weight: 600;\
+  letter-spacing: 0.16em;\
+  text-transform: uppercase;\
+  color: var(--ink-faint);\
+  display: block;\
+  margin-bottom: 8px;\
+  padding-bottom: 6px;\
+  border-bottom: 1px solid var(--rule-light);\
+\}\
+.chip-row \{ display: flex; flex-wrap: wrap; gap: 8px; \}\
+.chip \{\
+  font-family: var(--sans);\
+  font-size: 12px;\
+  font-weight: 400;\
+  color: var(--ink-light);\
+  background: #ffffff;\
+  border: 1px solid var(--rule);\
+  padding: 5px 13px;\
+  cursor: pointer;\
+  transition: all 0.15s;\
+  letter-spacing: 0.01em;\
+\}\
+.chip:hover \{ border-color: var(--oxford); color: var(--oxford); \}\
+.chip.selected \{ background: var(--oxford); color: #ffffff; border-color: var(--oxford); \}\
+\
+/* \uc0\u9472 \u9472  SELECTION CARDS \u9472 \u9472  */\
+.card-grid-2 \{ display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 4px; \}\
+.card-grid-3 \{ display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 4px; \}\
+\
+.sel-card \{\
+  background: #ffffff;\
+  padding: 24px 22px;\
+  cursor: pointer;\
+  transition: background 0.15s;\
+  position: relative;\
+\}\
+.sel-card:hover \{ background: var(--paper-warm); \}\
+.sel-card.selected \{ background: var(--oxford); \}\
+.sel-card.selected * \{ color: #ffffff !important; \}\
+.sel-card.selected .card-sub \{ color: rgba(255,255,255,0.7) !important; \}\
+.sel-card.selected::before \{\
+  content: '';\
+  position: absolute;\
+  top: 0; left: 0;\
+  width: 3px; height: 100%;\
+  background: var(--accent);\
+\}\
+\
+.card-title \{\
+  font-family: var(--serif);\
+  font-size: 17px;\
+  font-weight: 500;\
+  color: var(--oxford);\
+  margin-bottom: 6px;\
+  line-height: 1.3;\
+\}\
+.card-sub \{\
+  font-family: var(--sans);\
+  font-size: 13px;\
+  color: var(--ink-faint);\
+  line-height: 1.5;\
+  margin-bottom: 0;\
+\}\
+.card-details \{\
+  margin-top: 14px;\
+  padding-top: 12px;\
+  border-top: 1px solid var(--rule-light);\
+\}\
+.sel-card.selected .card-details \{ border-top-color: rgba(255,255,255,0.2); \}\
+.card-detail-item \{\
+  font-size: 12px;\
+  color: var(--ink-faint);\
+  padding: 3px 0;\
+  display: flex;\
+  gap: 8px;\
+  align-items: baseline;\
+\}\
+.card-detail-item::before \{ content: '\'97'; font-size: 10px; color: var(--rule); flex-shrink: 0; \}\
+\
+/* \uc0\u9472 \u9472  BUTTONS \u9472 \u9472  */\
+.btn-row \{ display: flex; align-items: center; gap: 16px; margin-top: 36px; \}\
+\
+.btn-primary \{\
+  font-family: var(--sans);\
+  font-size: 12px;\
+  font-weight: 600;\
+  letter-spacing: 0.12em;\
+  text-transform: uppercase;\
+  color: #ffffff;\
+  background: var(--oxford);\
+  border: none;\
+  padding: 12px 28px;\
+  cursor: pointer;\
+  transition: background 0.2s;\
+  display: inline-flex;\
+  align-items: center;\
+  gap: 10px;\
+\}\
+.btn-primary:hover \{ background: var(--oxford-mid); \}\
+.btn-primary:disabled \{ opacity: 0.4; cursor: not-allowed; \}\
+\
+.btn-secondary \{\
+  font-family: var(--sans);\
+  font-size: 12px;\
+  font-weight: 600;\
+  letter-spacing: 0.12em;\
+  text-transform: uppercase;\
+  color: var(--oxford);\
+  background: transparent;\
+  border: 1px solid var(--oxford);\
+  padding: 11px 22px;\
+  cursor: pointer;\
+  transition: all 0.2s;\
+\}\
+.btn-secondary:hover \{ background: var(--oxford); color: #ffffff; \}\
+.btn-secondary:disabled \{ opacity: 0.4; cursor: not-allowed; \}\
+\
+.btn-ghost \{\
+  font-family: var(--sans);\
+  font-size: 12px;\
+  font-weight: 400;\
+  letter-spacing: 0.06em;\
+  color: var(--ink-faint);\
+  background: none;\
+  border: none;\
+  cursor: pointer;\
+  padding: 8px 0;\
+  transition: color 0.2s;\
+  text-decoration: underline;\
+  text-underline-offset: 3px;\
+\}\
+.btn-ghost:hover \{ color: var(--ink); \}\
+\
+/* \uc0\u9472 \u9472  LOADING \u9472 \u9472  */\
+.loading-block \{\
+  padding: 80px 0;\
+  text-align: center;\
+\}\
+.loading-spinner \{\
+  width: 32px; height: 32px;\
+  border: 2px solid var(--rule);\
+  border-top-color: var(--oxford);\
+  border-radius: 50%;\
+  animation: spin 0.9s linear infinite;\
+  margin: 0 auto 28px;\
+\}\
+@keyframes spin \{ to \{ transform: rotate(360deg); \} \}\
+.loading-title \{\
+  font-family: var(--serif);\
+  font-size: 20px;\
+  font-weight: 400;\
+  color: var(--oxford);\
+  margin-bottom: 8px;\
+  font-style: italic;\
+\}\
+.loading-note \{\
+  font-size: 13px;\
+  color: var(--ink-faint);\
+  margin-bottom: 28px;\
+\}\
+.loading-log \{ text-align: left; max-width: 380px; margin: 0 auto; \}\
+.log-line \{\
+  font-family: var(--sans);\
+  font-size: 12px;\
+  color: var(--ink-faint);\
+  padding: 4px 0;\
+  opacity: 0;\
+  transition: opacity 0.3s;\
+  display: flex;\
+  align-items: center;\
+  gap: 10px;\
+\}\
+.log-line::before \{ content: ''; width: 5px; height: 1px; background: var(--rule); flex-shrink: 0; \}\
+.log-line.show \{ opacity: 1; \}\
+.log-line.done \{ color: var(--oxford); \}\
+.log-line.done::before \{ background: var(--oxford); \}\
+\
+/* \uc0\u9472 \u9472  COURSE HEADER \u9472 \u9472  */\
+.course-masthead \{\
+  border-top: 3px solid var(--oxford);\
+  padding: 32px 0 24px;\
+  margin-bottom: 32px;\
+  border-bottom: 1px solid var(--rule);\
+\}\
+.masthead-meta \{\
+  font-family: var(--sans);\
+  font-size: 11px;\
+  font-weight: 400;\
+  letter-spacing: 0.12em;\
+  text-transform: uppercase;\
+  color: var(--ink-faint);\
+  margin-bottom: 12px;\
+  display: flex;\
+  align-items: center;\
+  gap: 16px;\
+  flex-wrap: wrap;\
+\}\
+.masthead-meta span + span::before \{ content: '/'; margin-right: 16px; color: var(--rule); \}\
+.course-h1 \{\
+  font-family: var(--serif);\
+  font-size: 32px;\
+  font-weight: 400;\
+  color: var(--ink);\
+  line-height: 1.2;\
+  margin-bottom: 10px;\
+\}\
+.course-tagline \{\
+  font-family: var(--serif);\
+  font-size: 17px;\
+  font-style: italic;\
+  color: var(--ink-faint);\
+  line-height: 1.5;\
+  margin-bottom: 20px;\
+\}\
+.course-stats-row \{\
+  display: flex;\
+  gap: 36px;\
+  padding-top: 16px;\
+  border-top: 1px solid var(--rule-light);\
+\}\
+.stat-block .s-val \{\
+  font-family: var(--serif);\
+  font-size: 22px;\
+  color: var(--oxford);\
+  display: block;\
+  line-height: 1;\
+  margin-bottom: 3px;\
+\}\
+.stat-block .s-lbl \{\
+  font-family: var(--sans);\
+  font-size: 10px;\
+  font-weight: 600;\
+  letter-spacing: 0.12em;\
+  text-transform: uppercase;\
+  color: var(--ink-faint);\
+\}\
+\
+/* \uc0\u9472 \u9472  OUTCOMES \u9472 \u9472  */\
+.outcomes-block \{\
+  background: var(--paper-warm);\
+  border: 1px solid var(--rule);\
+  border-left: 3px solid var(--accent);\
+  padding: 20px 24px;\
+  margin-bottom: 28px;\
+\}\
+.outcomes-title \{\
+  font-family: var(--sans);\
+  font-size: 10px;\
+  font-weight: 600;\
+  letter-spacing: 0.16em;\
+  text-transform: uppercase;\
+  color: var(--accent);\
+  margin-bottom: 12px;\
+\}\
+.outcome-row \{\
+  display: flex;\
+  align-items: baseline;\
+  gap: 12px;\
+  font-family: var(--serif);\
+  font-size: 15px;\
+  color: var(--ink);\
+  line-height: 1.5;\
+  margin-bottom: 7px;\
+\}\
+.outcome-row::before \{ content: counter(oc); counter-increment: oc; font-size: 11px; font-family: var(--sans); color: var(--accent); font-weight: 600; flex-shrink: 0; min-width: 14px; \}\
+.outcomes-block \{ counter-reset: oc; \}\
+\
+/* \uc0\u9472 \u9472  EDIT NOTE \u9472 \u9472  */\
+.edit-note \{\
+  background: #ffffff;\
+  border: 1px solid var(--rule);\
+  padding: 14px 18px;\
+  margin-bottom: 24px;\
+  display: flex;\
+  align-items: center;\
+  justify-content: space-between;\
+  gap: 16px;\
+  flex-wrap: wrap;\
+\}\
+.edit-note-text \{\
+  font-size: 13px;\
+  color: var(--ink-faint);\
+  line-height: 1.5;\
+\}\
+.edit-note-text strong \{ color: var(--ink); font-weight: 600; \}\
+\
+/* \uc0\u9472 \u9472  MODULE ACCORDION \u9472 \u9472  */\
+.modules-heading \{\
+  font-family: var(--sans);\
+  font-size: 10px;\
+  font-weight: 600;\
+  letter-spacing: 0.18em;\
+  text-transform: uppercase;\
+  color: var(--ink-faint);\
+  margin-bottom: 2px;\
+  padding-bottom: 8px;\
+  border-bottom: 1px solid var(--rule);\
+\}\
+.module-item \{\
+  border-bottom: 1px solid var(--rule-light);\
+\}\
+.module-trigger \{\
+  display: flex;\
+  align-items: baseline;\
+  gap: 16px;\
+  padding: 16px 0;\
+  cursor: pointer;\
+  user-select: none;\
+  transition: background 0.1s;\
+\}\
+.module-trigger:hover \{ background: var(--paper-warm); padding-left: 6px; padding-right: 6px; margin: 0 -6px; \}\
+.mod-num \{\
+  font-family: var(--sans);\
+  font-size: 10px;\
+  font-weight: 600;\
+  letter-spacing: 0.12em;\
+  color: var(--ink-faint);\
+  min-width: 48px;\
+  flex-shrink: 0;\
+\}\
+.mod-title \{\
+  font-family: var(--serif);\
+  font-size: 17px;\
+  font-weight: 500;\
+  color: var(--ink);\
+  flex: 1;\
+  line-height: 1.3;\
+\}\
+.mod-meta \{\
+  font-family: var(--sans);\
+  font-size: 11px;\
+  color: var(--ink-faint);\
+  white-space: nowrap;\
+  flex-shrink: 0;\
+\}\
+.mod-arrow \{\
+  font-size: 12px;\
+  color: var(--ink-faint);\
+  transition: transform 0.2s;\
+  flex-shrink: 0;\
+\}\
+.module-item.open .mod-arrow \{ transform: rotate(90deg); \}\
+.module-body \{ display: none; padding: 0 0 20px 64px; \}\
+.module-item.open .module-body \{ display: block; \}\
+.mod-overview \{\
+  font-family: var(--serif);\
+  font-size: 14px;\
+  font-style: italic;\
+  color: var(--ink-faint);\
+  line-height: 1.6;\
+  margin-bottom: 14px;\
+  padding-bottom: 12px;\
+  border-bottom: 1px solid var(--rule-light);\
+\}\
+\
+/* \uc0\u9472 \u9472  LESSONS \u9472 \u9472  */\
+.lesson-list \{ list-style: none; \}\
+.lesson-item \{ border-bottom: 1px solid var(--rule-light); \}\
+.lesson-item:last-child \{ border-bottom: none; \}\
+.lesson-row \{\
+  display: flex;\
+  align-items: center;\
+  gap: 14px;\
+  padding: 9px 0;\
+\}\
+.lesson-type-tag \{\
+  font-family: var(--sans);\
+  font-size: 9px;\
+  font-weight: 600;\
+  letter-spacing: 0.1em;\
+  text-transform: uppercase;\
+  color: var(--ink-faint);\
+  background: var(--paper-deep);\
+  border: 1px solid var(--rule);\
+  padding: 2px 7px;\
+  flex-shrink: 0;\
+  min-width: 56px;\
+  text-align: center;\
+\}\
+.lesson-name-text \{\
+  flex: 1;\
+  font-family: var(--sans);\
+  font-size: 13px;\
+  color: var(--ink);\
+  line-height: 1.4;\
+\}\
+.lesson-dur-text \{\
+  font-size: 11px;\
+  color: var(--ink-faint);\
+  white-space: nowrap;\
+  flex-shrink: 0;\
+\}\
+.load-btn \{\
+  font-family: var(--sans);\
+  font-size: 10px;\
+  font-weight: 600;\
+  letter-spacing: 0.1em;\
+  text-transform: uppercase;\
+  color: var(--oxford);\
+  border: 1px solid var(--oxford);\
+  padding: 3px 10px;\
+  cursor: pointer;\
+  background: #ffffff;\
+  transition: all 0.15s;\
+  white-space: nowrap;\
+  flex-shrink: 0;\
+\}\
+.load-btn:hover \{ background: var(--oxford); color: #ffffff; \}\
+.load-btn.loaded \{ color: var(--accent); border-color: var(--rule); background: var(--paper-warm); cursor: pointer; \}\
+.load-btn.loading-state \{ color: var(--ink-faint); border-color: var(--rule); cursor: default; animation: pulse 1s infinite; \}\
+@keyframes pulse \{ 0%,100%\{opacity:1\}50%\{opacity:.4\} \}\
+\
+.lesson-content-area \{ display: none; padding: 12px 0 14px 70px; \}\
+.lesson-content-area.open \{ display: block; animation: appear 0.3s ease; \}\
+\
+/* \uc0\u9472 \u9472  CONTENT FORMAT STYLES \u9472 \u9472  */\
+.prose-content \{ font-family: var(--serif); font-size: 15px; line-height: 1.75; color: var(--ink); \}\
+.prose-content p \{ margin-bottom: 12px; \}\
+.bullets-content \{ font-family: var(--sans); font-size: 13px; color: var(--ink); \}\
+.bullets-content li \{ display: flex; gap: 12px; margin-bottom: 8px; line-height: 1.55; padding-left: 0; \}\
+.bullets-content li::before \{ content: '\'97'; color: var(--rule); flex-shrink: 0; \}\
+.bullets-content ul \{ list-style: none; padding: 0; \}\
+.slides-content \{ display: grid; gap: 1px; background: var(--rule); border: 1px solid var(--rule); \}\
+.slide-item \{ background: #ffffff; padding: 12px 16px; \}\
+.slide-n \{ font-family: var(--sans); font-size: 9px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 4px; \}\
+.slide-text \{ font-family: var(--sans); font-size: 13px; color: var(--ink); line-height: 1.55; \}\
+.trainer-aside \{\
+  margin-top: 14px;\
+  background: var(--paper-warm);\
+  border-left: 2px solid var(--oxford);\
+  padding: 10px 14px;\
+  font-family: var(--sans);\
+  font-size: 12px;\
+  color: var(--ink-faint);\
+  line-height: 1.5;\
+\}\
+.trainer-aside-label \{\
+  font-size: 9px;\
+  font-weight: 600;\
+  letter-spacing: 0.14em;\
+  text-transform: uppercase;\
+  color: var(--oxford);\
+  margin-bottom: 4px;\
+\}\
+\
+.assessment-note \{\
+  display: inline-flex;\
+  align-items: baseline;\
+  gap: 10px;\
+  margin-top: 14px;\
+  font-family: var(--sans);\
+  font-size: 12px;\
+  color: var(--ink-faint);\
+  border-top: 1px solid var(--rule-light);\
+  padding-top: 10px;\
+  width: 100%;\
+\}\
+.assessment-note strong \{ color: var(--ink); font-weight: 600; \}\
+\
+/* \uc0\u9472 \u9472  DEEP COURSE PANEL \u9472 \u9472  */\
+.deep-panel \{\
+  margin-top: 40px;\
+  border: 1px solid var(--rule);\
+  border-top: 3px solid var(--oxford);\
+  padding: 28px 28px 24px;\
+  background: var(--paper-warm);\
+\}\
+.deep-panel-title \{\
+  font-family: var(--serif);\
+  font-size: 22px;\
+  font-weight: 400;\
+  color: var(--oxford);\
+  margin-bottom: 8px;\
+\}\
+.deep-panel-desc \{\
+  font-family: var(--serif);\
+  font-size: 15px;\
+  font-style: italic;\
+  color: var(--ink-faint);\
+  line-height: 1.6;\
+  margin-bottom: 18px;\
+  max-width: 560px;\
+\}\
+.deep-features-list \{\
+  display: flex;\
+  flex-wrap: wrap;\
+  gap: 6px;\
+  margin-bottom: 22px;\
+\}\
+.deep-feat \{\
+  font-family: var(--sans);\
+  font-size: 11px;\
+  color: var(--ink-faint);\
+  border: 1px solid var(--rule);\
+  padding: 3px 10px;\
+  background: #ffffff;\
+\}\
+.deep-feat::before \{ content: '+ '; color: var(--oxford); font-weight: 600; \}\
+\
+/* \uc0\u9472 \u9472  DEEP COURSE OUTPUT \u9472 \u9472  */\
+.deep-progress-wrap \{\
+  margin-top: 28px;\
+  padding: 28px 0;\
+  border-top: 1px solid var(--rule-light);\
+  text-align: left;\
+\}\
+.deep-progress-title \{\
+  font-family: var(--serif);\
+  font-size: 18px;\
+  font-style: italic;\
+  color: var(--oxford);\
+  margin-bottom: 6px;\
+\}\
+.deep-progress-note \{\
+  font-size: 12px;\
+  color: var(--ink-faint);\
+  margin-bottom: 16px;\
+\}\
+.progress-track \{\
+  height: 2px;\
+  background: var(--rule);\
+  margin-bottom: 12px;\
+  max-width: 480px;\
+\}\
+.progress-fill \{\
+  height: 100%;\
+  background: var(--oxford);\
+  transition: width 0.4s ease;\
+  width: 0%;\
+\}\
+.progress-label \{\
+  font-family: var(--sans);\
+  font-size: 11px;\
+  color: var(--ink-faint);\
+  letter-spacing: 0.04em;\
+\}\
+\
+.deep-output-wrap \{\
+  margin-top: 32px;\
+  border-top: 3px solid var(--oxford);\
+  padding-top: 32px;\
+\}\
+.deep-edition-label \{\
+  font-family: var(--sans);\
+  font-size: 10px;\
+  font-weight: 600;\
+  letter-spacing: 0.18em;\
+  text-transform: uppercase;\
+  color: var(--ink-faint);\
+  margin-bottom: 6px;\
+\}\
+.deep-course-title \{\
+  font-family: var(--serif);\
+  font-size: 28px;\
+  font-weight: 400;\
+  color: var(--ink);\
+  margin-bottom: 28px;\
+  padding-bottom: 20px;\
+  border-bottom: 1px solid var(--rule);\
+\}\
+\
+.deep-mod-block \{ margin-bottom: 40px; \}\
+.deep-mod-heading \{\
+  font-family: var(--sans);\
+  font-size: 10px;\
+  font-weight: 600;\
+  letter-spacing: 0.18em;\
+  text-transform: uppercase;\
+  color: var(--ink-faint);\
+  margin-bottom: 4px;\
+\}\
+.deep-mod-title \{\
+  font-family: var(--serif);\
+  font-size: 22px;\
+  font-weight: 500;\
+  color: var(--oxford);\
+  margin-bottom: 20px;\
+  padding-bottom: 12px;\
+  border-bottom: 2px solid var(--oxford);\
+  opacity: 0.8;\
+\}\
+.deep-lesson-block \{\
+  margin-bottom: 28px;\
+  padding-bottom: 28px;\
+  border-bottom: 1px solid var(--rule-light);\
+\}\
+.deep-lesson-block:last-child \{ border-bottom: none; \}\
+.deep-lesson-heading \{\
+  font-family: var(--sans);\
+  font-size: 9px;\
+  font-weight: 600;\
+  letter-spacing: 0.16em;\
+  text-transform: uppercase;\
+  color: var(--accent);\
+  margin-bottom: 4px;\
+  display: flex;\
+  align-items: center;\
+  gap: 10px;\
+\}\
+.deep-lesson-title \{\
+  font-family: var(--serif);\
+  font-size: 19px;\
+  font-weight: 500;\
+  color: var(--ink);\
+  margin-bottom: 16px;\
+  line-height: 1.3;\
+\}\
+.deep-content \{\
+  font-family: var(--serif);\
+  font-size: 15px;\
+  line-height: 1.8;\
+  color: var(--ink);\
+\}\
+.deep-content h4 \{\
+  font-family: var(--sans);\
+  font-size: 10px;\
+  font-weight: 700;\
+  letter-spacing: 0.16em;\
+  text-transform: uppercase;\
+  color: var(--oxford);\
+  margin: 22px 0 10px;\
+  padding-bottom: 6px;\
+  border-bottom: 1px solid var(--rule-light);\
+\}\
+.deep-content p \{ margin-bottom: 12px; \}\
+.deep-content ul \{ list-style: none; padding: 0; margin-bottom: 12px; \}\
+.deep-content li \{\
+  display: flex;\
+  gap: 12px;\
+  margin-bottom: 7px;\
+  font-size: 14px;\
+  line-height: 1.6;\
+\}\
+.deep-content li::before \{ content: '\'97'; color: var(--rule); flex-shrink: 0; margin-top: 2px; \}\
+.deep-content strong \{ font-weight: 600; color: var(--ink); font-style: normal; \}\
+.deep-content em \{ font-style: italic; \}\
+.deep-content code \{\
+  font-family: 'Courier New', Courier, monospace;\
+  font-size: 13px;\
+  background: var(--code-bg);\
+  border: 1px solid var(--rule);\
+  padding: 1px 5px;\
+  color: var(--ink);\
+\}\
+\
+.deep-assessment-block \{\
+  margin-top: 14px;\
+  background: var(--paper-warm);\
+  border: 1px solid var(--rule);\
+  border-left: 3px solid var(--accent);\
+  padding: 12px 16px;\
+  font-family: var(--sans);\
+  font-size: 12px;\
+  color: var(--ink-faint);\
+\}\
+.deep-assessment-block strong \{ color: var(--accent); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 4px; \}\
+\
+/* \uc0\u9472 \u9472  ACTION ROW \u9472 \u9472  */\
+.action-row \{\
+  margin-top: 40px;\
+  padding-top: 24px;\
+  border-top: 1px solid var(--rule);\
+  display: flex;\
+  gap: 14px;\
+  align-items: center;\
+  flex-wrap: wrap;\
+\}\
+\
+/* \uc0\u9472 \u9472  FOOTER NOTE \u9472 \u9472  */\
+.footer-colophon \{\
+  margin-top: 56px;\
+  padding-top: 20px;\
+  border-top: 1px solid var(--rule);\
+  font-family: var(--serif);\
+  font-size: 13px;\
+  font-style: italic;\
+  color: var(--ink-faint);\
+  line-height: 1.7;\
+\}\
+.footer-colophon a \{ color: var(--oxford); text-decoration: underline; text-underline-offset: 2px; \}\
+\
+/* \uc0\u9472 \u9472  CONFIRM BOX \u9472 \u9472  */\
+.confirm-box \{\
+  background: var(--paper-warm);\
+  border: 1px solid var(--rule);\
+  padding: 16px 20px;\
+  margin-bottom: 20px;\
+  display: none;\
+  align-items: center;\
+  justify-content: space-between;\
+  gap: 16px;\
+  flex-wrap: wrap;\
+\}\
+.confirm-box-text \{ font-size: 13px; color: var(--ink); line-height: 1.5; \}\
+\
+/* \uc0\u9472 \u9472  RESPONSIVE \u9472 \u9472  */\
+@media (max-width: 680px) \{\
+  header \{ padding: 0 20px; \}\
+  main \{ padding: 40px 20px 80px; \}\
+  .progress-rule \{ padding: 0 20px; \}\
+  .card-grid-2, .card-grid-3 \{ grid-template-columns: 1fr; \}\
+  .module-body \{ padding-left: 0; \}\
+  .lesson-content-area \{ padding-left: 0; \}\
+  .course-stats-row \{ flex-wrap: wrap; gap: 20px; \}\
+\}\
+\
+/* \uc0\u9472 \u9472  FREEMIUM GATE \u9472 \u9472  */\
+.gate-overlay \{\
+  position: fixed; inset: 0; z-index: 500;\
+  background: rgba(0,10,20,0.65);\
+  backdrop-filter: blur(3px);\
+  display: none; align-items: center; justify-content: center;\
+  padding: 24px;\
+\}\
+.gate-overlay.open \{ display: flex; \}\
+.gate-box \{\
+  background: var(--paper);\
+  border-top: 4px solid var(--oxford);\
+  max-width: 520px; width: 100%;\
+  padding: 40px 36px 32px;\
+  position: relative;\
+  box-shadow: 0 24px 64px rgba(0,0,0,0.3);\
+\}\
+.gate-close \{\
+  position: absolute; top: 14px; right: 18px;\
+  background: none; border: none; cursor: pointer;\
+  font-size: 20px; color: var(--ink-faint); line-height: 1;\
+\}\
+.gate-close:hover \{ color: var(--ink); \}\
+.gate-eyebrow \{\
+  font-family: var(--sans); font-size: 10px; font-weight: 700;\
+  letter-spacing: .18em; text-transform: uppercase;\
+  color: var(--oxford); margin-bottom: 10px;\
+\}\
+.gate-title \{\
+  font-family: var(--serif); font-size: 24px; font-weight: 400;\
+  color: var(--ink); line-height: 1.2; margin-bottom: 12px;\
+\}\
+.gate-title em \{ color: var(--accent); font-style: italic; \}\
+.gate-body \{\
+  font-family: var(--serif); font-size: 15px; font-style: italic;\
+  color: var(--ink-faint); line-height: 1.7; margin-bottom: 24px;\
+\}\
+.gate-options \{ display: grid; gap: 10px; margin-bottom: 24px; \}\
+.gate-option \{\
+  border: 1px solid var(--rule); padding: 14px 16px;\
+  display: flex; align-items: flex-start; gap: 14px;\
+\}\
+.gate-option-num \{\
+  font-family: var(--sans); font-size: 11px; font-weight: 700;\
+  color: var(--oxford); background: var(--paper-warm);\
+  border: 1px solid var(--rule); padding: 2px 8px;\
+  flex-shrink: 0; margin-top: 1px;\
+\}\
+.gate-option-text \{ font-size: 13px; color: var(--ink); line-height: 1.5; \}\
+.gate-option-text strong \{ color: var(--oxford); font-weight: 600; \}\
+.gate-option-text a \{ color: var(--oxford); \}\
+.gate-actions \{ display: flex; gap: 12px; flex-wrap: wrap; \}\
+.gate-note \{\
+  margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--rule-light);\
+  font-size: 12px; color: var(--ink-faint); font-family: var(--sans); line-height: 1.5;\
+\}\
+.gate-note a \{ color: var(--oxford); \}\
+\
+/* \uc0\u9472 \u9472  PROCESS & INTERNAL TRAINING \'97 featured category \u9472 \u9472  */\
+.chip-category--featured \{\
+  background: var(--paper-warm);\
+  border: 1px solid var(--rule);\
+  border-left: 3px solid var(--oxford);\
+  padding: 16px 18px;\
+  margin-top: 4px;\
+  margin-bottom: 4px;\
+\}\
+.chip-cat-label--featured \{\
+  color: var(--oxford);\
+  font-weight: 700;\
+  font-size: 11px;\
+\}\
+.chip-cat-note \{\
+  font-family: var(--serif);\
+  font-size: 13px;\
+  font-style: italic;\
+  color: var(--ink-faint);\
+  line-height: 1.5;\
+  margin: 6px 0 10px;\
+\}\
+.chip--featured \{\
+  border-color: rgba(0,33,71,0.25);\
+  color: var(--oxford);\
+  background: #ffffff;\
+\}\
+.chip--featured:hover,\
+.chip--featured.selected \{\
+  background: var(--oxford);\
+  color: #ffffff;\
+  border-color: var(--oxford);\
+\}\
+\
+/* \uc0\u9472 \u9472  EMAIL CAPTURE MODAL \u9472 \u9472  */\
+.capture-overlay \{\
+  position: fixed; inset: 0; z-index: 600;\
+  background: rgba(0,10,20,0.55);\
+  backdrop-filter: blur(4px);\
+  display: none; align-items: center; justify-content: center; padding: 24px;\
+\}\
+.capture-overlay.open \{ display: flex; \}\
+.capture-box \{\
+  background: var(--paper); border-top: 4px solid var(--oxford);\
+  max-width: 460px; width: 100%; padding: 36px 32px 28px;\
+  box-shadow: 0 20px 56px rgba(0,0,0,0.25); position: relative;\
+\}\
+.capture-eyebrow \{\
+  font-family: var(--sans); font-size: 10px; font-weight: 700;\
+  letter-spacing: .18em; text-transform: uppercase;\
+  color: var(--oxford); margin-bottom: 10px;\
+\}\
+.capture-title \{\
+  font-family: var(--serif); font-size: 22px; font-weight: 400;\
+  color: var(--ink); line-height: 1.25; margin-bottom: 10px;\
+\}\
+.capture-title em \{ color: var(--accent); font-style: italic; \}\
+.capture-sub \{\
+  font-family: var(--serif); font-size: 14px; font-style: italic;\
+  color: var(--ink-faint); line-height: 1.6; margin-bottom: 22px;\
+\}\
+.capture-input-row \{\
+  display: flex; gap: 8px; margin-bottom: 10px;\
+\}\
+.capture-input-row input \{\
+  flex: 1; font-family: var(--sans); font-size: 14px;\
+  padding: 11px 14px; border: 1px solid var(--rule);\
+  border-bottom: 2px solid var(--rule); background: #ffffff;\
+  color: var(--ink); outline: none; border-radius: 0;\
+  transition: border-color .2s;\
+\}\
+.capture-input-row input:focus \{ border-color: var(--oxford); border-bottom-color: var(--oxford); \}\
+.capture-skip \{\
+  display: block; font-family: var(--sans); font-size: 11px;\
+  color: var(--ink-faint); text-align: center; margin-top: 12px;\
+  cursor: pointer; text-decoration: underline; text-underline-offset: 2px;\
+  background: none; border: none; width: 100%;\
+\}\
+.capture-skip:hover \{ color: var(--ink); \}\
+.capture-privacy \{\
+  font-size: 11px; color: var(--ink-faint); font-family: var(--sans);\
+  text-align: center; margin-top: 10px; line-height: 1.4;\
+\}\
+\
+/* \uc0\u9472 \u9472  ENQUIRY-ONLY CHIPS \u9472 \u9472  */\
+.chip--enquiry \{\
+  position: relative;\
+  cursor: pointer;\
+\}\
+.chip--enquiry::after \{\
+  content: '
+\f1 \uc0\u8594 
+\f0 \'a0Enquire';\
+  font-size: 9px;\
+  letter-spacing: .06em;\
+  font-family: var(--sans);\
+  color: var(--oxford);\
+  margin-left: 6px;\
+  opacity: 0.7;\
+\}\
+.chip--enquiry:hover \{\
+  background: var(--oxford);\
+  color: #ffffff;\
+  border-color: var(--oxford);\
+\}\
+.chip--enquiry:hover::after \{\
+  color: rgba(255,255,255,0.8);\
+\}\
+</style>\
+</head>\
+<body>\
+\
+<header>\
+  <div class="logo-wordmark">\
+    Centre for Applied AI and Future of Work\
+    <span>Course Builder</span>\
+  </div>\
+  <nav class="header-nav">\
+    <a href="https://www.caafw.org/Reskill" target="_blank">Re/Skill Programmes</a>\
+    <a href="https://www.caafw.org" target="_blank" class="nav-pill">caafw.org</a>\
+  </nav>\
+</header>\
+\
+<div class="progress-rule" id="progress-rule">\
+  <div class="prog-step active" id="step-1"><span class="p-num">I</span><span class="p-label">Subject</span></div>\
+  <div class="prog-step" id="step-2"><span class="p-num">II</span><span class="p-label">Your Role</span></div>\
+  <div class="prog-step" id="step-3"><span class="p-num">III</span><span class="p-label">Level</span></div>\
+  <div class="prog-step" id="step-4"><span class="p-num">IV</span><span class="p-label">Format</span></div>\
+  <div class="prog-step" id="step-5"><span class="p-num">V</span><span class="p-label">Context</span></div>\
+  <div class="prog-step" id="step-6"><span class="p-num">VI</span><span class="p-label">Generating</span></div>\
+  <div class="prog-step" id="step-7"><span class="p-num">VII</span><span class="p-label">Your Course</span></div>\
+</div>\
+\
+\
+<div id="api-key-bar" style="background:#fff8f0;border-bottom:2px solid #8b1a1a;padding:10px 48px;display:none;align-items:center;gap:14px;flex-wrap:wrap;">\
+  <div style="flex:1;min-width:200px">\
+    <div style="font-family:'Source Sans 3',sans-serif;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8b1a1a;margin-bottom:4px;">Anthropic API Key Required</div>\
+    <div style="font-size:12px;color:#7a7a7a;line-height:1.4;">This file is running outside Claude.ai. Enter your Anthropic API key to generate content. Your key is used only in this browser session and never stored.</div>\
+  </div>\
+  <div style="display:flex;gap:8px;align-items:center;flex-shrink:0">\
+    <input type="password" id="api-key-input" placeholder="sk-ant-..." style="width:260px;font-family:'Source Sans 3',sans-serif;font-size:13px;padding:8px 12px;border:1px solid #d4cfc4;border-bottom:2px solid #8b1a1a;background:#fff;color:#1a1a1a;outline:none;border-radius:0">\
+    <button onclick="saveApiKey()" style="font-family:'Source Sans 3',sans-serif;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:#002147;border:none;padding:9px 18px;cursor:pointer;">Save Key</button>\
+  </div>\
+  <div id="api-key-status" style="font-size:12px;color:#3d3d3d;width:100%;display:none;padding-top:4px;font-family:'Source Sans 3',sans-serif;"></div>\
+</div>\
+\
+<main>\
+\
+  <!-- SCREEN 1: SUBJECT -->\
+  <div class="screen active" id="screen-1">\
+    <div class="section-rule">Subject &amp; Domain</div>\
+    <h1>What would you like<br>to <em>teach or learn?</em></h1>\
+    <p class="lead">Select from the subjects below to generate a free course outline. Want a different subject, or training built on your own documents? CAAFW builds it for you.</p>\
+\
+    <div class="field-group">\
+\
+      <div class="chip-category">\
+        <span class="chip-cat-label">Sample subjects \'97 select one to explore</span>\
+        <div class="chip-row">\
+          <div class="chip" onclick="selectChip(this,'AI Fundamentals for Business')">AI Fundamentals for Business</div>\
+          <div class="chip" onclick="selectChip(this,'Python for Beginners')">Python for Beginners</div>\
+          <div class="chip" onclick="selectChip(this,'Financial Literacy')">Financial Literacy</div>\
+          <div class="chip" onclick="selectChip(this,'Project Management')">Project Management</div>\
+          <div class="chip" onclick="selectChip(this,'Human Biology')">Human Biology</div>\
+          <div class="chip" onclick="selectChip(this,'Newtonian Mechanics')">Newtonian Mechanics</div>\
+          <div class="chip" onclick="selectChip(this,'Marketing Fundamentals')">Marketing Fundamentals</div>\
+          <div class="chip" onclick="selectChip(this,'Creative Writing')">Creative Writing</div>\
+          <div class="chip" onclick="selectChip(this,'Public Speaking')">Public Speaking</div>\
+          <div class="chip" onclick="selectChip(this,'Leadership &amp; Management')">Leadership &amp; Management</div>\
+          <div class="chip" onclick="selectChip(this,'Prompt Engineering')">Prompt Engineering</div>\
+          <div class="chip" onclick="selectChip(this,'Climate Science')">Climate Science</div>\
+        </div>\
+      </div>\
+\
+      <div class="chip-category chip-category--featured">\
+        <span class="chip-cat-label chip-cat-label--featured">Process &amp; Internal Training</span>\
+        <p class="chip-cat-note">Built on your own SOPs, process maps, and compliance documents \'97 not generic AI content. Click any topic to send an enquiry directly to the CAAFW team.</p>\
+        <div class="chip-row">\
+          <div class="chip chip--featured chip--enquiry" onclick="showProcessEnquiry('Claims Handling Process')">Claims Handling Process</div>\
+          <div class="chip chip--featured chip--enquiry" onclick="showProcessEnquiry('Customer Service Standards')">Customer Service Standards</div>\
+          <div class="chip chip--featured chip--enquiry" onclick="showProcessEnquiry('Compliance &amp; Regulatory Training')">Compliance &amp; Regulatory Training</div>\
+          <div class="chip chip--featured chip--enquiry" onclick="showProcessEnquiry('Onboarding &amp; Induction')">Onboarding &amp; Induction</div>\
+          <div class="chip chip--featured chip--enquiry" onclick="showProcessEnquiry('Health &amp; Safety Procedures')">Health &amp; Safety Procedures</div>\
+        </div>\
+      </div>\
+\
+      <div class="chip-category">\
+        <span class="chip-cat-label">Need a different subject?</span>\
+        <div style="background:var(--paper-warm);border:1px solid var(--rule);border-left:3px solid var(--rule);padding:16px 18px;margin-top:4px">\
+          <p style="font-family:var(--serif);font-size:14px;font-style:italic;color:var(--ink-faint);line-height:1.6;margin-bottom:12px">The sample subjects above show what the tool can do. CAAFW builds course outlines and full content for any subject, any level, any format \'97 including your proprietary internal processes.</p>\
+          <a href="mailto:hello@caafw.org?subject=Course%20Builder%20Enquiry&body=Subject%20I%20need%20a%20course%20for%3A%0A%0ARole%20(Learner%20%2F%20Instructor%20%2F%20Instructional%20Designer)%3A%0A%0ALevel%3A%0A%0AAny%20other%20context%3A" class="btn-secondary" style="text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:12px">Request Your Subject &rarr;</a>\
+        </div>\
+      </div>\
+\
+      <input type="hidden" id="topic-input" value="">\
+    </div>\
+    <div class="btn-row">\
+      <button class="btn-primary" onclick="goTo(2)">Continue &rarr;</button>\
+    </div>\
+  </div>\
+\
+  <!-- SCREEN 2: ROLE -->\
+  <div class="screen" id="screen-2">\
+    <div class="section-rule">Your Role</div>\
+    <h1>What is your <em>role</em><br>in this course?</h1>\
+    <p class="lead">Your role shapes everything \'97 the depth, the language, and the purpose of every lesson generated.</p>\
+    <div class="field-group">\
+      <div class="card-grid-3">\
+        <div class="sel-card" onclick="selectRole(this,'Learner')">\
+          <div class="card-title">Learner</div>\
+          <div class="card-sub">I want to study this subject myself. Write content I can read, follow, and learn from directly.</div>\
+          <div class="card-details">\
+            <div class="card-detail-item">Explanations written to build my understanding</div>\
+            <div class="card-detail-item">Self-check questions and exercises</div>\
+            <div class="card-detail-item">Worked examples I can follow step by step</div>\
+            <div class="card-detail-item">Key terms defined precisely</div>\
+          </div>\
+        </div>\
+        <div class="sel-card" onclick="selectRole(this,'Instructor')">\
+          <div class="card-title">Instructor</div>\
+          <div class="card-sub">I am designing this course to teach others. Give me subject knowledge and trainer delivery guides.</div>\
+          <div class="card-details">\
+            <div class="card-detail-item">Subject matter the trainer must master and teach</div>\
+            <div class="card-detail-item">Worked teaching examples for live delivery</div>\
+            <div class="card-detail-item">Discussion questions and activities</div>\
+            <div class="card-detail-item">Misconceptions to address and timing guidance</div>\
+          </div>\
+        </div>\
+        <div class="sel-card" onclick="selectRole(this,'Designer')">\
+          <div class="card-title">Instructional Designer</div>\
+          <div class="card-sub">I have existing process documents, SOPs, or guidelines. Convert them into structured training for staff and trainers.</div>\
+          <div class="card-details">\
+            <div class="card-detail-item">Paste your process document, SOP, or policy text as context</div>\
+            <div class="card-detail-item">AI restructures your content into modules and lessons</div>\
+            <div class="card-detail-item">Outputs for both trainers and learners simultaneously</div>\
+            <div class="card-detail-item" style="color:var(--accent);font-style:italic">Document upload (PDF / Word / PowerPoint) \'97 coming soon</div>\
+          </div>\
+        </div>\
+      </div>\
+    </div>\
+    <div class="btn-row">\
+      <button class="btn-primary" onclick="goTo(3)">Continue &rarr;</button>\
+      <button class="btn-ghost" onclick="goTo(1)">&larr; Back</button>\
+    </div>\
+  </div>\
+\
+  <!-- SCREEN 3: LEVEL -->\
+  <div class="screen" id="screen-3">\
+    <div class="section-rule">Knowledge Level</div>\
+    <h1 id="level-h1">What is the <em>starting point?</em></h1>\
+    <p class="lead" id="level-lead">We will adapt depth, language, and complexity accordingly.</p>\
+    <div class="field-group">\
+      <div class="card-grid-3">\
+        <div class="sel-card" onclick="selectLevel(this,'Beginner')">\
+          <div class="card-title">Beginner</div>\
+          <div class="card-sub">No prior knowledge assumed. Foundations established with care, plain language throughout.</div>\
+        </div>\
+        <div class="sel-card" onclick="selectLevel(this,'Intermediate')">\
+          <div class="card-title">Intermediate</div>\
+          <div class="card-sub">Some familiarity. Builds on existing knowledge with applied, practical focus.</div>\
+        </div>\
+        <div class="sel-card" onclick="selectLevel(this,'Advanced')">\
+          <div class="card-title">Advanced</div>\
+          <div class="card-sub">Expertise assumed. Strategic depth, complex analysis, mastery-level outcomes.</div>\
+        </div>\
+      </div>\
+    </div>\
+    <div class="btn-row">\
+      <button class="btn-primary" onclick="goTo(4)">Continue &rarr;</button>\
+      <button class="btn-ghost" onclick="goTo(2)">&larr; Back</button>\
+    </div>\
+  </div>\
+\
+  <!-- SCREEN 4: FORMAT -->\
+  <div class="screen" id="screen-4">\
+    <div class="section-rule">Content Format</div>\
+    <h1>How should lessons<br>be <em>written?</em></h1>\
+    <p class="lead">Choose the form in which lesson content will be presented to you.</p>\
+    <div class="field-group">\
+      <div class="card-grid-3">\
+        <div class="sel-card" onclick="selectFormat(this,'prose')">\
+          <div class="card-title">Full Text</div>\
+          <div class="card-sub">Paragraphs of real teaching content. Best for self-study or course reading materials.</div>\
+        </div>\
+        <div class="sel-card" onclick="selectFormat(this,'bullets')">\
+          <div class="card-title">Structured Points</div>\
+          <div class="card-sub">Key concepts and explanations as clear, detailed bullet points. Good for reference.</div>\
+        </div>\
+        <div class="sel-card" onclick="selectFormat(this,'slides')">\
+          <div class="card-title">Presenter Notes</div>\
+          <div class="card-sub">Six to seven substantive points per lesson. Ready to deliver or use as speaker notes.</div>\
+        </div>\
+      </div>\
+    </div>\
+    <div class="btn-row">\
+      <button class="btn-primary" onclick="goTo(5)">Continue &rarr;</button>\
+      <button class="btn-ghost" onclick="goTo(3)">&larr; Back</button>\
+    </div>\
+  </div>\
+\
+  <!-- SCREEN 5: CONTEXT -->\
+  <div class="screen" id="screen-5">\
+    <div class="section-rule">Additional Context</div>\
+    <h1>Any further<br><em>guidance?</em></h1>\
+    <p class="lead">Optional. The more context you provide, the more precisely the course will be tailored.</p>\
+    <div class="field-group">\
+      <label class="field-label" id="audience-label">Who is this course for?</label>\
+      <input type="text" id="audience-input" placeholder="e.g. marketing managers, postgraduate students, small business owners\'85">\
+    </div>\
+    <div class="field-group">\
+      <label class="field-label" id="goals-label">Key learning goals</label>\
+      <textarea id="goals-input" placeholder="e.g. Learners should be able to apply these skills in professional practice within two weeks\'85"></textarea>\
+    </div>\
+    <div class="field-group">\
+      <label class="field-label">Number of modules</label>\
+      <select id="modules-select">\
+        <option value="auto">Determine automatically (recommended)</option>\
+        <option value="4">4 modules</option>\
+        <option value="5">5 modules</option>\
+        <option value="6">6 modules</option>\
+        <option value="8">8 modules</option>\
+        <option value="10">10 modules</option>\
+      </select>\
+    </div>\
+    <div class="btn-row">\
+      <button class="btn-primary" onclick="goTo(6)">Generate Course &rarr;</button>\
+      <button class="btn-ghost" onclick="goTo(4)">&larr; Back</button>\
+    </div>\
+  </div>\
+\
+  <!-- SCREEN 6: GENERATING -->\
+  <div class="screen" id="screen-6">\
+    <div class="loading-block">\
+      <div class="loading-spinner"></div>\
+      <div class="loading-title">Designing your curriculum</div>\
+      <div class="loading-note">Please wait while the course structure is prepared.</div>\
+      <div class="loading-log">\
+        <div class="log-line" id="ls-1">Analysing subject and context</div>\
+        <div class="log-line" id="ls-2">Adapting to <span id="ls-role"></span> mode</div>\
+        <div class="log-line" id="ls-3">Sequencing module structure</div>\
+        <div class="log-line" id="ls-4">Designing lessons and assessments</div>\
+        <div class="log-line" id="ls-5">Finalising course blueprint</div>\
+      </div>\
+    </div>\
+  </div>\
+\
+  <!-- SCREEN 7: COURSE -->\
+  <div class="screen" id="screen-7">\
+    <div id="course-output"></div>\
+  </div>\
+\
+\
+<!-- EMAIL CAPTURE MODAL -->\
+<div class="capture-overlay" id="email-capture-overlay" onclick="closeCapureIfOverlay(event)">\
+  <div class="capture-box">\
+    <div class="capture-eyebrow">CAAFW Course Builder</div>\
+    <div class="capture-title">Where shall we send<br>your <em>course outline?</em></div>\
+    <div class="capture-sub">Enter your work email and we will send you the outline along with guidance on generating the full course content through CAAFW.</div>\
+    <div class="capture-input-row">\
+      <input type="email" id="capture-email-input" placeholder="your@email.com" onkeydown="captureKeydown(event)">\
+      <button class="btn-primary" onclick="submitEmailCapture()" style="white-space:nowrap;padding:11px 20px">Send Outline &rarr;</button>\
+    </div>\
+    <div class="capture-privacy">Your email is used only to send your outline and CAAFW course information. No spam.</div>\
+    <button class="capture-skip" onclick="skipEmailCapture()">Continue without email &rarr;</button>\
+  </div>\
+</div>\
+\
+<!-- FREEMIUM GATE MODAL -->\
+<div class="gate-overlay" id="gate-overlay" onclick="closeGateIfOverlay(event)">\
+  <div class="gate-box">\
+    <button class="gate-close" onclick="closeFreemiumGate()" aria-label="Close">&times;</button>\
+    <div class="gate-eyebrow">CAAFW Course Builder</div>\
+    <div class="gate-title">Your course outline<br>is <em>ready to fill.</em></div>\
+    <div class="gate-body">Your course outline is ready above. Full lesson content, worked examples, assessments, and complete course generation are delivered through CAAFW \'97 where your course comes to life with certificates, learner tracking, and expert review.</div>\
+    <div class="gate-options">\
+      <div class="gate-option">\
+        <span class="gate-option-num">01</span>\
+        <div class="gate-option-text"><strong>Get your course built by CAAFW.</strong> Send your outline to <a href="mailto:hello@caafw.org">hello@caafw.org</a> and our team will generate, review, and deliver the full course \'97 from \'a3299 per cohort.</div>\
+      </div>\
+      <div class="gate-option">\
+        <span class="gate-option-num">02</span>\
+        <div class="gate-option-text"><strong>Access full content generation.</strong> Visit <a href="https://www.caafw.org/Reskill" target="_blank">caafw.org/Reskill</a> to explore CAAFW's Re/Skill platform with complete course authoring, delivery, and learner management.</div>\
+      </div>\
+      <div class="gate-option">\
+        <span class="gate-option-num">03</span>\
+        <div class="gate-option-text"><strong>Enterprise &amp; document-to-training.</strong> Have SOPs, process maps, or compliance documents? We convert them into structured staff training. <a href="mailto:hello@caafw.org">Email us</a> to discuss.</div>\
+      </div>\
+    </div>\
+    <div class="gate-actions">\
+      <a href="mailto:hello@caafw.org" class="btn-primary" style="text-decoration:none">Email CAAFW &rarr;</a>\
+      <a href="https://www.caafw.org/Reskill" target="_blank" class="btn-secondary" style="text-decoration:none">Visit Re/Skill</a>\
+    </div>\
+    <div class="gate-note">This tool is free for personal and educational use under <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>. Commercial use requires a licence \'97 <a href="mailto:hello@caafw.org">contact us</a>.</div>\
+  </div>\
+</div>\
+\
+</main>\
+\
+<script>\
+\
+// \uc0\u9472 \u9472  API KEY MANAGEMENT \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+let _apiKey = '';\
+\
+function saveApiKey()\{\
+  const k = document.getElementById('api-key-input').value.trim();\
+  if(!k.startsWith('sk-ant-'))\{\
+    document.getElementById('api-key-status').textContent = 'Key should start with sk-ant- \'97 please check and try again.';\
+    document.getElementById('api-key-status').style.display = 'block';\
+    document.getElementById('api-key-status').style.color = '#8b1a1a';\
+    return;\
+  \}\
+  _apiKey = k;\
+  document.getElementById('api-key-status').textContent = 'Key saved for this session. You can now generate courses.';\
+  document.getElementById('api-key-status').style.display = 'block';\
+  document.getElementById('api-key-status').style.color = '#002147';\
+  document.getElementById('api-key-input').value = '';\
+\}\
+\
+// Detect if running inside Claude.ai (no key needed) or standalone (key needed)\
+function isClaudeAi()\{\
+  return window.location.hostname.includes('claude.ai') || \
+         window.location.protocol === 'blob:' ||\
+         window.location.hostname === '';\
+\}\
+\
+function getApiKey()\{\
+  return _apiKey || null;\
+\}\
+\
+function buildHeaders()\{\
+  const key = getApiKey();\
+  // No explicit key: rely entirely on the platform proxy (Claude.ai handles auth)\
+  // With explicit key: send full direct-browser auth headers for standalone use\
+  if(!key)\{\
+    return \{'Content-Type':'application/json'\};\
+  \}\
+  return \{\
+    'Content-Type':'application/json',\
+    'x-api-key': key,\
+    'anthropic-version':'2023-06-01',\
+    'anthropic-dangerous-direct-browser-access':'true'\
+  \};\
+\}\
+\
+// Show key bar if not in Claude.ai and no key set\
+window.addEventListener('DOMContentLoaded', async ()=>\{\
+  // Quick connectivity test \'97 tiny request to check API is reachable\
+  try \{\
+    const test = await fetch('https://api.anthropic.com/v1/messages', \{\
+      method: 'POST',\
+      headers: buildHeaders(),\
+      body: JSON.stringify(\{\
+        model: 'claude-sonnet-4-6',\
+        max_tokens: 5,\
+        messages: [\{role:'user', content:'hi'\}]\
+      \})\
+    \});\
+    const txt = await test.text();\
+    console.log('API connectivity test \'97 status:', test.status, 'response:', txt.substring(0,150));\
+    if(test.status === 401 || test.status === 403)\{\
+      // Auth error \'97 needs key\
+      document.getElementById('api-key-bar').style.display = 'flex';\
+      document.getElementById('api-key-status').textContent = 'API key required to use this tool outside Claude.ai.';\
+      document.getElementById('api-key-status').style.display = 'block';\
+      document.getElementById('api-key-status').style.color = '#8b1a1a';\
+    \}\
+    // 200 or other \'97 API is reachable, all good\
+  \} catch(e) \{\
+    console.warn('API connectivity test failed:', e.message);\
+    // Network blocked \'97 show key bar with explanation\
+    document.getElementById('api-key-bar').style.display = 'flex';\
+    document.getElementById('api-key-status').textContent = 'Could not reach Anthropic API ('+e.message+'). If you are using this outside Claude.ai, enter your API key above.';\
+    document.getElementById('api-key-status').style.display = 'block';\
+    document.getElementById('api-key-status').style.color = '#8b1a1a';\
+  \}\
+\});\
+\
+// \uc0\u9472 \u9472  API CALL WRAPPER with proper error surfacing \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+async function callAPI(body)\{\
+  let res;\
+  try \{\
+    res = await fetch('https://api.anthropic.com/v1/messages', \{\
+      method: 'POST',\
+      headers: buildHeaders(),\
+      body: JSON.stringify(body)\
+    \});\
+  \} catch(networkErr) \{\
+    // fetch() itself failed \'97 likely CSP block or no network\
+    console.error('Network error:', networkErr);\
+    throw new Error('Network error \'97 check your connection or API key setup');\
+  \}\
+  // Read response as text first so we can handle non-JSON responses\
+  let text;\
+  try \{ text = await res.text(); \} catch(e) \{ throw new Error('Could not read API response'); \}\
+  // Log full response for debugging\
+  console.log('API status:', res.status, 'body:', text.substring(0,200));\
+  let parsed;\
+  try \{ parsed = JSON.parse(text); \} catch(e) \{\
+    throw new Error('API returned non-JSON (status '+res.status+'): '+text.substring(0,100));\
+  \}\
+  if(!res.ok)\{\
+    const msg = parsed?.error?.message || 'HTTP '+res.status;\
+    throw new Error(msg);\
+  \}\
+  return parsed;\
+\}\
+\
+// \uc0\u9472 \u9472  FREEMIUM MODE \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+// Set to true for the public GitHub release (outline only, content via CAAFW)\
+// Set to false for the full CAAFW platform version\
+/*\
+ * CAAFW Course Builder \'97 Proprietary Methodology\
+ * Copyright (c) 2026 Centre for Applied AI and Future of Work\
+ * All rights reserved. caafw.org\
+ *\
+ * This file is released under CC BY-NC 4.0 for personal and educational use.\
+ * Commercial use requires a written licence from CAAFW.\
+ * Contact: hello@caafw.org\
+ *\
+ * The following are proprietary to CAAFW and protected as trade secrets:\
+ * - Subject-expert prompting architecture and curriculum generation methodology\
+ * - Learner / Instructor / Instructional Designer role-adaptive content system\
+ * - Document-to-training grounding methodology (Instructional Designer mode)\
+ * - Progressive course context injection system\
+ * FREEMIUM = true locks content generation in this public release.\
+ * The full methodology is available only under commercial licence.\
+ */\
+const FREEMIUM = true;\
+\
+const S=\{topic:'',role:'',level:'',format:'',audience:'',goals:'',modules:'auto',courseData:null\};\
+\
+function updateSteps(n)\{\
+  for(let i=1;i<=7;i++)\{\
+    const el=document.getElementById('step-'+i);\
+    el.className='prog-step'+(i===n?' active':i<n?' done':'');\
+  \}\
+\}\
+\
+function goTo(n)\{\
+  if(n===2&&!S.topic&&!document.getElementById('topic-input').value.trim())\{\
+    // No chip selected \'97 scroll to chips and highlight\
+    const chips=document.querySelector('.chip-row');\
+    if(chips)chips.scrollIntoView(\{behavior:'smooth',block:'center'\});\
+    document.querySelector('.chip-cat-label').style.color='var(--accent)';\
+    setTimeout(()=>document.querySelector('.chip-cat-label').style.color='',2000);\
+    return;\
+  \}\
+  if(n===3&&!S.role)\{alert('Please select your role \'97 Learner, Instructor, or Instructional Designer.');return;\}\
+  if(n===4&&!S.level)\{alert('Please select a knowledge level.');return;\}\
+  if(n===5&&!S.format)\{alert('Please choose a content format.');return;\}\
+  if(!S.topic) S.topic=document.getElementById('topic-input').value.trim();\
+  if(n>=6)\{\
+    S.audience=document.getElementById('audience-input').value.trim();\
+    S.goals=document.getElementById('goals-input').value.trim();\
+    S.modules=document.getElementById('modules-select').value;\
+  \}\
+  if(n===3)\{\
+    const lvlH=document.getElementById('level-h1');\
+    const lvlL=document.getElementById('level-lead');\
+    if(S.role==='Instructor')\{lvlH.innerHTML='What level are<br>your <em>learners?</em>';lvlL.textContent='Set the level of those you will teach. Content and trainer guidance will adapt accordingly.';\}\
+    else if(S.role==='Designer')\{lvlH.innerHTML='What level are<br>your <em>staff?</em>';lvlL.textContent='Set the level of the staff being trained. We will adapt the complexity of the training output accordingly.';\}\
+    else\{lvlH.innerHTML='What is your<br><em>starting point?</em>';lvlL.textContent='We will adapt depth, language, and complexity to your starting point.';\}\
+  \}\
+  if(n===5)\{\
+    const aLbl=document.getElementById('audience-label');\
+    const gLbl=document.getElementById('goals-label');\
+    const aIn=document.getElementById('audience-input');\
+    const gIn=document.getElementById('goals-input');\
+    if(S.role==='Designer')\{\
+      aLbl.textContent='Who is being trained?';\
+      aIn.placeholder='e.g. insurance claims handlers, customer service agents, new joiners\'85';\
+      gLbl.textContent='Paste your process document / SOP / policy text here';\
+      gIn.placeholder='Paste the full text of your process document, SOP, compliance guidelines, or guardrails here. The more detail you provide, the more accurately the training will reflect your actual processes.';\
+    \} else if(S.role==='Instructor')\{\
+      aLbl.textContent='Who are your learners?';\
+      aIn.placeholder='e.g. marketing managers, postgraduate students, small business owners\'85';\
+      gLbl.textContent='Key learning goals';\
+      gIn.placeholder='e.g. Learners should be able to apply these skills in professional practice within two weeks\'85';\
+    \} else \{\
+      aLbl.textContent='Who is this course for?';\
+      aIn.placeholder='e.g. marketing managers, postgraduate students, small business owners\'85';\
+      gLbl.textContent='Key learning goals';\
+      gIn.placeholder='e.g. Learners should be able to apply these skills in professional practice within two weeks\'85';\
+    \}\
+  \}\
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));\
+  document.getElementById('screen-'+n).classList.add('active');\
+  updateSteps(n);\
+  if(n===6)startGeneration();\
+\}\
+\
+function selectChip(el,val)\{\
+  document.querySelectorAll('.chip:not(.chip--enquiry)').forEach(c=>c.classList.remove('selected'));\
+  el.classList.add('selected');\
+  // Decode HTML entities for storage\
+  const txt=document.createElement('textarea');\
+  txt.innerHTML=val;\
+  S.topic=txt.value;\
+  document.getElementById('topic-input').value=S.topic;\
+\}\
+function syncTopicInput()\{\
+  // No-op for hidden input in free version\
+\}\
+function selectRole(el,role)\{\
+  document.querySelectorAll('#screen-2 .sel-card').forEach(c=>c.classList.remove('selected'));\
+  el.classList.add('selected');S.role=role;\
+\}\
+function selectLevel(el,lvl)\{\
+  document.querySelectorAll('#screen-3 .sel-card').forEach(c=>c.classList.remove('selected'));\
+  el.classList.add('selected');S.level=lvl;\
+\}\
+function selectFormat(el,fmt)\{\
+  document.querySelectorAll('#screen-4 .sel-card').forEach(c=>c.classList.remove('selected'));\
+  el.classList.add('selected');S.format=fmt;\
+\}\
+\
+function startGeneration()\{\
+  // Show email capture modal first, then generate\
+  showEmailCapture();\
+\}\
+function startGenerationDirect()\{\
+  // Called if email already captured this session\
+  proceedWithGeneration();\
+\}\
+function proceedWithGeneration()\{\
+  document.getElementById('ls-role').textContent=S.role==='Instructor'?'Instructor':'Learner';\
+  const steps=['ls-1','ls-2','ls-3','ls-4','ls-5'];\
+  let i=0;\
+  document.querySelectorAll('.log-line').forEach(s=>s.classList.remove('show','done'));\
+  const iv=setInterval(()=>\{\
+    if(i>0)document.getElementById(steps[i-1]).classList.add('done');\
+    if(i<steps.length)\{document.getElementById(steps[i]).classList.add('show');i++;\}\
+    else\{clearInterval(iv);callClaudeOutline();\}\
+  \},650);\
+\}\
+\
+async function callClaudeOutline()\{\
+  // OUTPUT: JSON outline. Calibrated max_tokens=800 covers 8 mods x 5 lessons comfortably.\
+  const mc=S.modules==='auto'?(S.level==='Beginner'?5:S.level==='Intermediate'?6:8):parseInt(S.modules);\
+  const lc=\{'Beginner':'3-4','Intermediate':'4-5','Advanced':'5-6'\}[S.level];\
+  // Schema-first prompt: no verbose English explanations of fields \'97 saves ~120 input tokens\
+  const p=`JSON outline. Topic:"$\{S.topic\}" Role:$\{S.role\} Level:$\{S.level\} `+\
+    `Audience:$\{S.audience||'general'\} Modules:$\{mc\} LessonsPerMod:$\{lc\} `+\
+    (S.goals&&S.role==='Designer'?`SourceDoc:"$\{S.goals.substring(0,500)\}" `:(S.goals?`Goals:"$\{S.goals\}" `:''))+\
+    `Types:video|reading|quiz|activity Dur:video=8-15m,reading=10-20m,quiz=5-10m,activity=15-30m `+\
+    `Overview:$\{S.role==='Instructor'?'trainer key teaching points':S.role==='Designer'?'process step or policy rule from source document':'learner benefit'\}\
+`+\
+    `\{"courseTitle":"","tagline":"","totalDuration":"","outcomes":["","","",""],`+\
+    `"modules":[\{"title":"","overview":"","duration":"","lessons":[\{"id":"","name":"","type":"","duration":""\}],"assessment":""\}]\}`;\
+  try\{\
+    const data=await callAPI(\{model:'claude-sonnet-4-6',max_tokens:800,system:'JSON only. No markdown.',messages:[\{role:'user',content:p\}]\});\
+    let raw=data.content.find(b=>b.type==='text')?.text||'';\
+    raw=raw.replace(/```json|```/g,'').trim();\
+    S.courseData=JSON.parse(raw);\
+  \}catch(e)\{\
+    console.error('Outline API error:',e);\
+    // Show error in loading screen before falling back\
+    const note=document.getElementById('ls-5');\
+    if(note)\{note.textContent='Error: '+e.message+' \'97 showing template outline instead. Check browser console for details.';note.style.color='#8b1a1a';\}\
+    if(!isClaudeAi()&&!getApiKey())\{\
+      document.getElementById('api-key-bar').style.display='flex';\
+      document.getElementById('api-key-status').textContent='API key needed to generate AI content. Enter your key above and try again.';\
+      document.getElementById('api-key-status').style.display='block';\
+      document.getElementById('api-key-status').style.color='#8b1a1a';\
+    \}\
+    S.courseData=buildFallback();\
+  \}\
+  renderCourse();\
+\}\
+\
+function buildFallback()\{\
+  const n=S.modules==='auto'?(S.level==='Beginner'?5:S.level==='Intermediate'?6:8):parseInt(S.modules);\
+  const titles=['Foundations and Core Concepts','Key Principles in Practice','Methods and Techniques','Applied Case Studies','Advanced Applications','Strategy and Integration','Mastery and Further Study'];\
+  const modules=[];\
+  for(let i=0;i<n;i++)\{\
+    const lc=S.level==='Beginner'?3:S.level==='Intermediate'?4:5;\
+    const lessons=[];\
+    const types=['video','reading','activity','quiz','reading'];\
+    const durs=['10 min','14 min','20 min','8 min','12 min'];\
+    for(let j=0;j<lc;j++)lessons.push(\{id:`m$\{i+1\}l$\{j+1\}`,name:`$\{['Introduction to','Exploring','Applying','Practising','Synthesis of'][j]||'Study of'\} $\{S.topic\}`,type:types[j],duration:durs[j]\});\
+    modules.push(\{title:titles[i]||`Part $\{i+1\}`,overview:`This module addresses $\{(titles[i]||'core content').toLowerCase()\} within the study of $\{S.topic\}.`,duration:S.level==='Beginner'?'45 min':S.level==='Intermediate'?'60 min':'90 min',lessons,assessment:S.level==='Beginner'?'Five-question knowledge assessment':S.level==='Intermediate'?'Applied exercise using module concepts':'Analytical assignment or case study'\});\
+  \}\
+  return\{courseTitle:S.topic,tagline:`A $\{S.level.toLowerCase()\}-level course in $\{S.topic\}.`,totalDuration:S.level==='Beginner'?'4\'965 hrs':S.level==='Intermediate'?'6\'968 hrs':'10\'9612 hrs',outcomes:[`Understand the core principles of $\{S.topic\}`,`Apply key concepts and methods in context`,`Evaluate different approaches and frameworks`,`Demonstrate competence and fluency in the subject`],modules\};\
+\}\
+\
+function getLessonTypeLabel(type)\{return\{video:'Video',reading:'Reading',quiz:'Assessment',activity:'Activity'\}[type]||type;\}\
+\
+function renderCourse()\{\
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));\
+  document.getElementById('screen-7').classList.add('active');\
+  updateSteps(7);\
+  const C=S.courseData;\
+  const totalLessons=C.modules.reduce((a,m)=>a+m.lessons.length,0);\
+  const fmtLabel=\{'prose':'Full Text','bullets':'Structured Points','slides':'Presenter Notes'\}[S.format]||S.format;\
+\
+  let html=`\
+  <div class="course-masthead">\
+    <div class="masthead-meta">\
+      <span>CAAFW Course Builder</span>\
+      <span>$\{S.role==='Instructor'?'Instructor Edition':S.role==='Designer'?'Process Designer Edition':'Learner Edition'\}</span>\
+      <span>$\{S.level\}</span>\
+      <span>$\{fmtLabel\}</span>\
+    </div>\
+    <div class="course-h1">$\{C.courseTitle\}</div>\
+    <div class="course-tagline">$\{C.tagline\}</div>\
+    <div class="course-stats-row">\
+      <div class="stat-block"><span class="s-val">$\{C.modules.length\}</span><span class="s-lbl">Modules</span></div>\
+      <div class="stat-block"><span class="s-val">$\{totalLessons\}</span><span class="s-lbl">Lessons</span></div>\
+      <div class="stat-block"><span class="s-val">$\{C.totalDuration\}</span><span class="s-lbl">Duration</span></div>\
+      <div class="stat-block"><span class="s-val">$\{S.level\}</span><span class="s-lbl">Level</span></div>\
+    </div>\
+  </div>\
+\
+  <div class="outcomes-block">\
+    <div class="outcomes-title">Learning Outcomes</div>\
+    $\{C.outcomes.map(o=>`<div class="outcome-row">$\{o\}</div>`).join('')\}\
+  </div>\
+\
+  <div class="edit-note">\
+    <div class="edit-note-text">\
+      Your course outline is ready. Expand any module to review the structure. To generate full lesson content, click <strong>Get Content</strong> \'97 delivered through CAAFW Re/Skill.\
+    </div>\
+    <div style="display:flex;gap:10px;flex-shrink:0">\
+      <button class="btn-secondary" onclick="showGenAllConfirm()" id="gen-all-btn">Load All Content</button>\
+    </div>\
+  </div>\
+\
+  <div class="confirm-box" id="gen-all-confirm">\
+    <div class="confirm-box-text">Load content for all $\{totalLessons\} lessons? This will take approximately one to two minutes.</div>\
+    <div style="display:flex;gap:10px">\
+      <button class="btn-primary" onclick="confirmGenerateAll()">Proceed</button>\
+      <button class="btn-ghost" onclick="document.getElementById('gen-all-confirm').style.display='none'">Cancel</button>\
+    </div>\
+  </div>\
+\
+  <div class="modules-heading">Course Modules</div>`;\
+\
+  C.modules.forEach((mod,mi)=>\{\
+    html+=`\
+    <div class="module-item" id="mod-$\{mi\}">\
+      <div class="module-trigger" onclick="toggleModule($\{mi\})">\
+        <span class="mod-num">Module $\{String(mi+1).padStart(2,'0')\}</span>\
+        <span class="mod-title">$\{mod.title\}</span>\
+        <span class="mod-meta">$\{mod.duration\} &middot; $\{mod.lessons.length\} lessons</span>\
+        <span class="mod-arrow">&#9658;</span>\
+      </div>\
+      <div class="module-body">\
+        <div class="mod-overview">$\{mod.overview\}</div>\
+        <ul class="lesson-list">\
+          $\{mod.lessons.map((l,li)=>`<li class="lesson-item">\
+            <div class="lesson-row">\
+              <span class="lesson-type-tag">$\{getLessonTypeLabel(l.type)\}</span>\
+              <span class="lesson-name-text">$\{l.name\}</span>\
+              <span class="lesson-dur-text">$\{l.duration\}</span>\
+              <span class="load-btn" id="btn-$\{mi\}-$\{li\}" onclick="loadLessonContent($\{mi\},$\{li\})">Get Content</span>\
+            </div>\
+            <div class="lesson-content-area" id="content-$\{mi\}-$\{li\}"></div>\
+          </li>`).join('')\}\
+        </ul>\
+        <div class="assessment-note"><strong>Module Assessment:</strong> $\{mod.assessment\}</div>\
+      </div>\
+    </div>`;\
+  \});\
+\
+  html+=`\
+  <div class="deep-panel">\
+    <div class="deep-panel-title">Generate the Complete Course</div>\
+    <div class="deep-panel-desc">Once you have reviewed the outline, generate a comprehensive, publication-ready course document \'97 every lesson written in full scholarly depth, with $\{S.role==='Instructor'?'complete trainer delivery guides, subject matter exposition, teaching examples, discussion questions, and assessment tasks':'detailed explanations, worked examples, self-check questions, key terms, and practical exercises'\}.</div>\
+    <div class="deep-features-list">\
+      <span class="deep-feat">Full lesson content</span>\
+      $\{S.role==='Instructor'?'<span class="deep-feat">Trainer delivery guides</span><span class="deep-feat">Teaching examples</span><span class="deep-feat">Discussion questions</span><span class="deep-feat">Timing guidance</span>':S.role==='Designer'?'<span class="deep-feat">Process steps from your document</span><span class="deep-feat">Rules and guardrails</span><span class="deep-feat">Worked scenarios</span><span class="deep-feat">Common staff errors</span><span class="deep-feat">Trainer delivery notes</span>':'<span class="deep-feat">Worked examples</span><span class="deep-feat">Self-check questions</span><span class="deep-feat">Key term definitions</span><span class="deep-feat">Practice exercises</span>'\}\
+      <span class="deep-feat">Module assessments</span>\
+    </div>\
+    <button class="btn-primary" onclick="generateDeepCourse()" id="deep-btn">Get Full Course via CAAFW &rarr;</button>\
+  </div>\
+  <div id="deep-output"></div>\
+\
+  <div class="action-row">\
+    <button class="btn-primary" onclick="resetBuilder()">Build Another Course</button>\
+    <button class="btn-secondary" onclick="window.open('https://www.caafw.org/Reskill','_blank')">Deliver via CAAFW Re/Skill</button>\
+  </div>\
+\
+  <div class="footer-colophon">\
+    To receive this course as a formatted document, or to deliver it through CAAFW's learning platform with certificates and learner tracking,\
+    write to <a href="mailto:hello@caafw.org">hello@caafw.org</a> or visit\
+    <a href="https://www.caafw.org/Reskill" target="_blank">caafw.org/Reskill</a>.\
+  </div>`;\
+\
+  document.getElementById('course-output').innerHTML=html;\
+  setTimeout(()=>toggleModule(0),300);\
+\}\
+\
+async function loadLessonContent(mi,li)\{\
+  if(FREEMIUM)\{ showFreemiumGate(); return; \}\
+  const btn=document.getElementById(`btn-$\{mi\}-$\{li\}`);\
+  const contentEl=document.getElementById(`content-$\{mi\}-$\{li\}`);\
+  if(contentEl.classList.contains('open'))return;\
+  btn.textContent='Loading';btn.className='load-btn loading-state';\
+  const mod=S.courseData.modules[mi];\
+  const lesson=mod.lessons[li];\
+  const isInstructor=S.role==='Instructor';\
+  // System prompt is format-agnostic \'97 output format instruction is in user prompt only\
+  const isDesigner=S.role==='Designer';\
+  const sysPrompt=isDesigner\
+    ?`You are converting internal process documentation into training content for "$\{S.topic\}". Use ONLY information from the provided source document. Do not invent or supplement. Level: $\{S.level\}.`\
+    :isInstructor\
+    ?`Subject expert in "$\{S.topic\}", $\{S.level\} level. Write real subject knowledge for a trainer. No facilitation meta-advice.`\
+    :`Subject expert in "$\{S.topic\}", $\{S.level\} level. Teach directly to the student. Real concepts, real examples. Never describe \'97 just teach.`;\
+  const srcCtx=isDesigner&&S.goals?` Source: "$\{S.goals.substring(0,600)\}"`:'' ;\
+  const fmtInstructions=\{\
+    prose:isDesigner\
+      ?`Convert process step "$\{lesson.name\}" into training content.$\{srcCtx\} Write 3-4 paragraphs covering: (1) what staff must do, (2) rules/guardrails that apply, (3) a worked example of this process step, (4) common errors. Use source document only. Output: HTML <p> tags only.`\
+      :isInstructor\
+      ?`Trainer guide for "$\{lesson.name\}" in $\{S.topic\}. 3-4 paragraphs of real subject content + 1 worked example + 2 common misconceptions. Subject expert register. Output: HTML <p> tags only.`\
+      :`Teach "$\{lesson.name\}" in $\{S.topic\} to a $\{S.level\} learner. 3-4 paragraphs of real subject content + 1 worked example. No meta-commentary. Output: HTML <p> tags only.`,\
+    bullets:isDesigner\
+      ?`Convert "$\{lesson.name\}" into 7 training bullets.$\{srcCtx\} Each bullet must state a specific rule, step, guardrail, or action from the process. Include 1 worked scenario bullet. JSON:\{"points":[""]\}`\
+      :isInstructor\
+      ?`7 trainer subject-matter bullets for "$\{lesson.name\}": real facts/concepts/rules/techniques, 1 worked example. JSON:\{"points":[""]\}`\
+      :`7 bullet points teaching real concepts from "$\{lesson.name\}" \'97 definitions, rules, techniques, 1 worked example. JSON:\{"points":[""]\}`,\
+    slides:isDesigner\
+      ?`Convert "$\{lesson.name\}" into 6 trainer talking points.$\{srcCtx\} Each point must be a specific, actionable piece of process knowledge a trainer explains to staff. No generic statements. JSON:\{"points":[""]\}`\
+      :isInstructor\
+      ?`6 trainer slide talking points for "$\{lesson.name\}": real facts/rules/formulas/techniques per slide. JSON:\{"points":[""]\}`\
+      :`6 slide points for "$\{lesson.name\}" \'97 each a substantive, concrete piece of knowledge. JSON:\{"points":[""]\}`\
+  \}[S.format];\
+  const prompt=`L:"$\{lesson.name\}" M:"$\{mod.title\}" T:$\{S.topic\} $\{S.role\} $\{S.level\}\\n`+\
+    fmtInstructions+' '+(S.format==='prose'?'HTML <p> only.':'JSON:\{"points":[""]\}');\
+  try\{\
+    const data=await callAPI(\{model:'claude-sonnet-4-6',max_tokens:500,system:sysPrompt,messages:[\{role:'user',content:prompt\}]\});\
+    let raw=data.content.find(b=>b.type==='text')?.text||'';\
+    raw=raw.replace(/```json|```/gi,'').trim();\
+    renderLessonContent(contentEl,raw,lesson,isInstructor);\
+  \}catch(e)\{\
+    console.error('Lesson API error:',e);\
+    const errMsg=e.message||'Unknown error';\
+    const isAuth=errMsg.includes('401')||errMsg.includes('authentication')||errMsg.includes('API key');\
+    if(isAuth||(!isClaudeAi()&&!getApiKey()))\{\
+      contentEl.innerHTML='<div style="font-family:var(--sans);font-size:13px;color:#8b1a1a;padding:10px 0;border-top:1px solid #ede9e0"><strong>API key required.</strong> Enter your Anthropic API key in the bar at the top of the page, then click Retry.</div>';\
+      document.getElementById('api-key-bar').style.display='flex';\
+    \} else \{\
+      contentEl.innerHTML='<div style="font-family:var(--sans);font-size:13px;color:#7a7a7a;padding:10px 0">Could not load: '+errMsg+'. Please try again.</div>';\
+    \}\
+    contentEl.classList.add('open');\
+    btn.textContent='Retry';btn.className='load-btn';\
+    btn.onclick=()=>\{contentEl.innerHTML='';contentEl.classList.remove('open');loadLessonContent(mi,li);\};\
+    return;\
+  \}\
+  btn.textContent='Loaded';btn.className='load-btn loaded';\
+  btn.onclick=()=>contentEl.classList.toggle('open');\
+  contentEl.classList.add('open');\
+\}\
+\
+function renderLessonContent(el,raw,lesson,isInstructor)\{\
+  let html='';\
+  const isDesignerRender=S.role==='Designer';\
+  const fallback=isDesignerRender\
+    ?`<p>This training step covers <strong>$\{lesson.name\}</strong>. It is drawn from your source document and covers the specific process, rules, and guardrails your staff must follow.</p><p>Ensure learners can describe the step accurately in their own words and identify the key guardrails that apply before moving on.</p>`\
+    :isInstructor\
+    ?`<p>This lesson addresses $\{lesson.name\}. As the trainer, establish the core concepts of this topic with clarity, using concrete examples from the subject domain. Ensure learners can articulate the key principle in their own words before proceeding.</p><p>Address the most common misconception in this area directly \'97 stating what learners often believe incorrectly and why the accurate account differs. This prevents confusion at later stages of the course.</p>`\
+    :`<p>This lesson introduces $\{lesson.name\}. Study the core concept carefully before attempting the exercises. Each idea introduced here will recur in later modules.</p><p>Ensure you can explain the central principle in your own words \'97 this is the most reliable test of genuine understanding rather than surface familiarity.</p>`;\
+  if(S.format==='prose')\{\
+    const text=raw||fallback;\
+    html=`<div class="prose-content">$\{text.split('\\n').filter(Boolean).map(p=>p.startsWith('<')?p:`<p>$\{p\}</p>`).join('')\}</div>`;\
+    if(isDesignerRender)html+=`<div class="trainer-aside"><div class="trainer-aside-label">Source Fidelity Note</div>This content is drawn from your process document. Review before deployment to confirm accuracy against your current procedures.</div>`;\
+    else if(isInstructor)html+=`<div class="trainer-aside"><div class="trainer-aside-label">Instructor Note</div>The above constitutes the subject matter to deliver. Adapt examples to your learners' professional or academic context.</div>`;\
+  \} else \{\
+    let points=[];\
+    try\{const p=JSON.parse(raw);points=p.points||[];\}catch(e)\{\}\
+    if(!points.length)points=isInstructor\
+      ?[`Core concept: the principal idea the trainer must convey in $\{lesson.name\}`,`Theoretical foundation: the underlying principle that makes this concept work`,`First worked example: a concrete case the trainer can walk through with learners`,`Second worked example: a contrasting or extended application of the concept`,`Anticipated misconception: what learners often misunderstand, and the correction`,`Discussion prompt: a question that tests whether learners have genuinely understood`,`Assessment indicator: what a correct, competent answer to this topic looks like`]\
+      :[`Definition: the precise meaning of the central term or concept in this lesson`,`Core principle: the fundamental rule or relationship you must understand`,`Why it matters: the practical or theoretical significance of this concept`,`Worked example: a step-by-step demonstration of the concept in action`,`Common error: the mistake most learners make \'97 and how to avoid it`,`Application: how this concept connects to real situations in the subject`,`Check your understanding: can you explain this concept without looking at your notes?`];\
+    if(S.format==='bullets')\{\
+      html=`<div class="bullets-content"><ul>$\{points.map(p=>`<li>$\{p\}</li>`).join('')\}</ul></div>`;\
+      if(isInstructor)html+=`<div class="trainer-aside"><div class="trainer-aside-label">Instructor Note</div>Each point above represents one teaching beat. Develop each with a concrete example when delivering to learners.</div>`;\
+    \} else \{\
+      html=`<div class="slides-content">$\{points.map((p,i)=>`<div class="slide-item"><div class="slide-n">$\{isInstructor?`Talking Point $\{i+1\}`:`Slide $\{i+1\}`\}</div><div class="slide-text">$\{p\}</div></div>`).join('')\}</div>`;\
+      if(isInstructor)html+=`<div class="trainer-aside"><div class="trainer-aside-label">Instructor Note</div>Expand each talking point with a concrete example or demonstration when presenting to learners.</div>`;\
+    \}\
+  \}\
+  el.innerHTML=html;\
+\}\
+\
+// \uc0\u9472 \u9472  PROCESS ENQUIRY \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+function showProcessEnquiry(topic)\{\
+  const subject = encodeURIComponent('Process Training Enquiry: ' + topic);\
+  const body = encodeURIComponent(\
+    'I am interested in building training based on our internal processes.\\n\\n' +\
+    'Process / subject area: ' + topic + '\\n\\n' +\
+    'Organisation type:\\n\\nApproximate number of staff to train:\\n\\nBrief description of what you need:'\
+  );\
+  window.location.href = 'mailto:hello@caafw.org?subject=' + subject + '&body=' + body;\
+\}\
+\
+// \uc0\u9472 \u9472  EMAIL CAPTURE \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+function showEmailCapture()\{\
+  // Skip if already captured this session\
+  if(sessionStorage.getItem('caafw_email'))\{ proceedWithGeneration(); return; \}\
+  document.getElementById('email-capture-overlay').classList.add('open');\
+  document.body.style.overflow='hidden';\
+  setTimeout(()=>document.getElementById('capture-email-input').focus(), 200);\
+\}\
+function closeEmailCapture()\{\
+  document.getElementById('email-capture-overlay').classList.remove('open');\
+  document.body.style.overflow='';\
+\}\
+function submitEmailCapture()\{\
+  const email = document.getElementById('capture-email-input').value.trim();\
+  if(email && /^[^@]+@[^@]+\\.[^@]+$/.test(email))\{\
+    // Send to CAAFW via mailto (no backend needed)\
+    // Also store locally so we don't ask again this session\
+    sessionStorage.setItem('caafw_email', email);\
+    // Silent mailto to log the lead \'97 opens in background\
+    const subject = encodeURIComponent('Course Builder Lead: ' + S.topic);\
+    const body = encodeURIComponent(\
+      'Email: ' + email + '\\n' +\
+      'Topic: ' + S.topic + '\\n' +\
+      'Role: ' + S.role + '\\n' +\
+      'Level: ' + S.level + '\\n' +\
+      'Format: ' + S.format\
+    );\
+    // Create hidden iframe to fire mailto without interrupting UX\
+    const a = document.createElement('a');\
+    a.href = 'mailto:hello@caafw.org?subject=' + subject + '&body=' + body;\
+    a.style.display = 'none';\
+    document.body.appendChild(a);\
+    // Don't click \'97 just log in console and proceed. Mailto is unreliable silently.\
+    console.log('CAAFW lead captured:', email, S.topic);\
+    closeEmailCapture();\
+    proceedWithGeneration();\
+  \} else \{\
+    document.getElementById('capture-email-input').style.borderColor='var(--accent)';\
+    document.getElementById('capture-email-input').focus();\
+  \}\
+\}\
+function skipEmailCapture()\{\
+  closeEmailCapture();\
+  proceedWithGeneration();\
+\}\
+function captureKeydown(e)\{\
+  if(e.key==='Enter') submitEmailCapture();\
+\}\
+function closeCapureIfOverlay(e)\{\
+  if(e.target===document.getElementById('email-capture-overlay')) skipEmailCapture();\
+\}\
+\
+\
+function showFreemiumGate()\{\
+  document.getElementById('gate-overlay').classList.add('open');\
+  document.body.style.overflow='hidden';\
+\}\
+function closeFreemiumGate()\{\
+  document.getElementById('gate-overlay').classList.remove('open');\
+  document.body.style.overflow='';\
+\}\
+function closeGateIfOverlay(e)\{\
+  if(e.target===document.getElementById('gate-overlay')) closeFreemiumGate();\
+\}\
+\
+function showGenAllConfirm()\{document.getElementById('gen-all-confirm').style.display='flex';\}\
+async function confirmGenerateAll()\{\
+  if(FREEMIUM)\{ showFreemiumGate(); return; \}\
+  document.getElementById('gen-all-confirm').style.display='none';\
+  const btn=document.getElementById('gen-all-btn');\
+  btn.textContent='Loading content\'85';btn.disabled=true;\
+  const C=S.courseData;\
+  for(let mi=0;mi<C.modules.length;mi++)\{\
+    if(!document.getElementById('mod-'+mi).classList.contains('open'))toggleModule(mi);\
+    for(let li=0;li<C.modules[mi].lessons.length;li++)\{\
+      if(!document.getElementById(`content-$\{mi\}-$\{li\}`).classList.contains('open'))\{\
+        await loadLessonContent(mi,li);\
+        await new Promise(r=>setTimeout(r,250));\
+      \}\
+    \}\
+  \}\
+  btn.textContent='All Content Loaded';btn.disabled=false;\
+\}\
+\
+async function generateDeepCourse()\{\
+  if(FREEMIUM)\{ showFreemiumGate(); return; \}\
+  const btn=document.getElementById('deep-btn');\
+  btn.disabled=true;btn.textContent='Generating\'85';\
+  const deepOut=document.getElementById('deep-output');\
+  deepOut.innerHTML=`<div class="deep-progress-wrap"><div class="deep-progress-title">Writing the complete course\'85</div><div class="deep-progress-note">Composing full lesson content for every module. This takes two to three minutes.</div><div class="progress-track"><div class="progress-fill" id="deep-progress-bar"></div></div><div class="progress-label" id="deep-progress-label">Preparing\'85</div></div>`;\
+  deepOut.scrollIntoView(\{behavior:'smooth',block:'start'\});\
+  const C=S.courseData;\
+  const isInstructor=S.role==='Instructor';\
+  const allDeepContent=[];\
+  const totalLessons=C.modules.reduce((a,m)=>a+m.lessons.length,0);\
+  let lessonsDone=0;\
+  // Compact index: module titles only. Full lesson lists add noise not signal.\
+  // Saves ~140 tokens per lesson call on a typical 6-module course.\
+  const courseIndex=C.modules.map((m,mi)=>`M$\{mi+1\}:$\{m.title\}`).join(' | ');\
+  for(let mi=0;mi<C.modules.length;mi++)\{\
+    const mod=C.modules[mi];\
+    const priorModules=C.modules.slice(0,mi).map(m=>m.title).join(', ');\
+    const lessonContents=[];\
+    for(let li=0;li<mod.lessons.length;li++)\{\
+      const lesson=mod.lessons[li];\
+      lessonsDone++;\
+      const pct=Math.round((lessonsDone/totalLessons)*90);\
+      document.getElementById('deep-progress-bar').style.width=pct+'%';\
+      document.getElementById('deep-progress-label').textContent=`Writing: $\{lesson.name\} ($\{lessonsDone\} of $\{totalLessons\})`;\
+      const isDeepDesigner=S.role==='Designer';\
+      const srcDoc=isDeepDesigner&&S.goals?` Source document: "$\{S.goals.substring(0,800)\}"`:'' ;\
+      const systemPrompt=isDeepDesigner\
+        ?`You are converting internal process documents into training materials for "$\{S.topic\}". Use ONLY the source document content.$\{srcDoc\} Do not invent or add outside knowledge. Ground every lesson in the source material. HTML only: h4,p,ul,li,strong,em,code.`\
+        :isInstructor\
+        ?`Subject expert in "$\{S.topic\}", $\{S.level\} level. Write real subject knowledge for a trainer \'97 actual concepts, theory, technique. No pedagogy meta-advice. HTML only: h4,p,ul,li,strong,em,code.`\
+        :`Subject expert in "$\{S.topic\}", writing to a $\{S.level.toLowerCase()\} student. Teach directly. Real concepts, real examples, step by step. Never describe \'97 just teach. HTML only: h4,p,ul,li,strong,em,code.`;\
+      const priorContext=priorModules?`Prior modules covered: $\{priorModules\}. Do not repeat those concepts \'97 build on them.`:'This is the opening module \'97 establish foundations clearly.';\
+      const learnerPrompt=`Course: "$\{C.courseTitle\}" \'97 $\{S.topic\}\
+Course index: $\{courseIndex\}\
+$\{priorContext\}\
+Write: M$\{mi+1\} "$\{mod.title\}" \'97 Lesson $\{li+1\}: "$\{lesson.name\}"\
+\
+Teach this lesson. Use exactly these h4 sections:\
+<h4>Learning Objective</h4> [1 sentence: what learner can do after]\
+<h4>The Concept</h4> [3-5 paragraphs of real subject matter \'97 actual syntax/equations/facts/frameworks, not descriptions]\
+<h4>Worked Example</h4> [step-by-step: real code / real calculation / real case analysis]\
+<h4>Common Errors</h4> [2-3 specific misconceptions for this topic + corrections]\
+<h4>Check Your Understanding</h4> [3 questions + answers testing this lesson's content]\
+<h4>Key Terms</h4> [4-6 precise definitions]\
+No preamble. Begin with first h4.`;\
+\
+      const instructorPrompt=`Course: "$\{C.courseTitle\}" \'97 $\{S.topic\}\
+Course index: $\{courseIndex\}\
+$\{priorContext\}\
+Write: M$\{mi+1\} "$\{mod.title\}" \'97 Lesson $\{li+1\}: "$\{lesson.name\}"\
+\
+Write the trainer subject-matter guide. Use exactly these h4 sections:\
+<h4>Lesson Objective</h4> [1 sentence: what learners can do after]\
+<h4>Subject Matter to Teach</h4> [4-5 paragraphs of actual subject knowledge \'97 real concepts/theory/technique, no facilitation advice]\
+<h4>Teaching Examples</h4> [2-3 fully worked examples detailed enough to deliver live]\
+<h4>Discussion Questions</h4> [3 subject-level questions grounded in this lesson's content]\
+<h4>Misconceptions to Address</h4> [2-3 specific errors learners make here + why + correction]\
+<h4>Assessment Task</h4> [specific task proving mastery + what a correct answer looks like]\
+<h4>Suggested Timing \'97 $\{lesson.duration\}</h4> [time allocation across sections]\
+No preamble. Begin with first h4.`;\
+\
+      const designerPrompt=`Course: "$\{C.courseTitle\}" \'97 $\{S.topic\}\
+Course index: $\{courseIndex\}\
+$\{priorContext\}\
+$\{srcDoc\}\
+Write: M$\{mi+1\} "$\{mod.title\}" \'97 Lesson $\{li+1\}: "$\{lesson.name\}"\
+\
+Use ONLY the source document. Structure as:\
+<h4>Process Step</h4>[the exact step or rule from the document this lesson covers]\
+<h4>What Staff Must Do</h4>[3-4 paragraphs: precise actions, sequence, and requirements from the document]\
+<h4>Rules and Guardrails</h4>[specific compliance requirements, limits, or exceptions from the document]\
+<h4>Worked Scenario</h4>[a realistic example showing this process step applied correctly \'97 e.g. a real claim or customer interaction]\
+<h4>Common Errors</h4>[2-3 mistakes staff make in this step and the correct approach]\
+<h4>Trainer Delivery Notes</h4>[how to teach this step: what to emphasise, demonstrate, and test]\
+No preamble. Begin with first h4.`;\
+\
+      try\{\
+        const data=await callAPI(\{model:'claude-sonnet-4-6',max_tokens:4000,system:systemPrompt,messages:[\{role:'user',content:isDeepDesigner?designerPrompt:isInstructor?instructorPrompt:learnerPrompt\}]\});\
+        let raw=data.content.find(b=>b.type==='text')?.text||'';\
+        raw=raw.replace(/```html?|```/gi,'').trim();\
+        lessonContents.push(\{lesson,content:raw\});\
+      \}catch(e)\{\
+        console.error('Deep API error:',e);\
+        const errMsg=e.message||'Unknown error';\
+        const isAuth=errMsg.includes('401')||errMsg.includes('authentication')||errMsg.includes('API key');\
+        const errHtml=isAuth||(!isClaudeAi()&&!getApiKey())\
+          ?'<p style="color:#8b1a1a"><strong>API key required.</strong> Enter your Anthropic API key at the top of the page and try generating again.</p>'\
+          :'<p style="color:#7a7a7a">Could not load content: '+errMsg+'</p>';\
+        lessonContents.push(\{lesson,content:errHtml\});\
+        if(isAuth||(!isClaudeAi()&&!getApiKey()))document.getElementById('api-key-bar').style.display='flex';\
+      \}\
+      await new Promise(r=>setTimeout(r,300));\
+    \}\
+    allDeepContent.push(\{mod,lessons:lessonContents\});\
+  \}\
+  document.getElementById('deep-progress-bar').style.width='100%';\
+  document.getElementById('deep-progress-label').textContent='Complete \'97 rendering course\'85';\
+  await new Promise(r=>setTimeout(r,400));\
+  renderDeepCourse(allDeepContent);\
+  btn.textContent='Complete Course Generated';\
+\}\
+\
+function renderDeepCourse(content)\{\
+  const isInstructor=S.role==='Instructor';\
+  let html=`<div class="deep-output-wrap">\
+    <div class="deep-edition-label">CAAFW Course Builder &mdash; $\{S.role==='Designer'?'Process Designer Edition':isInstructor?'Instructor Edition':'Learner Edition'\}</div>\
+    <div class="deep-course-title">$\{S.courseData.courseTitle\}</div>`;\
+  content.forEach((\{mod,lessons\},mi)=>\{\
+    html+=`<div class="deep-mod-block">\
+      <div class="deep-mod-heading">Module $\{String(mi+1).padStart(2,'0')\}</div>\
+      <div class="deep-mod-title">$\{mod.title\}</div>`;\
+    lessons.forEach((\{lesson,content:lc\},li)=>\{\
+      html+=`<div class="deep-lesson-block">\
+        <div class="deep-lesson-heading">Lesson $\{li+1\} &nbsp;&middot;&nbsp; $\{lesson.duration\}</div>\
+        <div class="deep-lesson-title">$\{lesson.name\}</div>\
+        <div class="deep-content">$\{lc\}</div>\
+        $\{S.role==='Designer'?`<div class="trainer-aside" style="margin-top:16px"><div class="trainer-aside-label">Source Fidelity</div>Review this content against your current procedures before deployment. If your process has changed since this document was written, update accordingly.</div>`:isInstructor?`<div class="trainer-aside" style="margin-top:16px"><div class="trainer-aside-label">Instructor Reminder</div>Adapt all examples to your learners' discipline and context. Pause after each section for questions.</div>`:''\}\
+      </div>`;\
+    \});\
+    html+=`<div class="deep-assessment-block"><strong>Module Assessment</strong>$\{mod.assessment\}</div></div>`;\
+  \});\
+  html+=`<div class="footer-colophon" style="margin-top:32px">\
+    This course was generated by the CAAFW Course Builder. For a formatted document, hosted delivery, or learner certification, write to\
+    <a href="mailto:hello@caafw.org">hello@caafw.org</a> or visit\
+    <a href="https://www.caafw.org/Reskill" target="_blank">caafw.org/Reskill</a>.\
+  </div></div>`;\
+  document.getElementById('deep-output').innerHTML=html;\
+  document.getElementById('deep-output').scrollIntoView(\{behavior:'smooth',block:'start'\});\
+\}\
+\
+function toggleModule(idx)\{document.getElementById('mod-'+idx).classList.toggle('open');\}\
+\
+function resetBuilder()\{\
+  Object.assign(S,\{topic:'',role:'',level:'',format:'',audience:'',goals:'',modules:'auto',courseData:null\});\
+  ['topic-input','audience-input','goals-input'].forEach(id=>document.getElementById(id).value='');\
+  document.getElementById('modules-select').value='auto';\
+  document.querySelectorAll('.chip,.sel-card').forEach(c=>c.classList.remove('selected'));\
+  document.querySelectorAll('.log-line').forEach(s=>s.classList.remove('show','done'));\
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));\
+  document.getElementById('screen-1').classList.add('active');\
+  updateSteps(1);\
+\}\
+</script>\
+<div style="font-family:var(--sans);font-size:10px;color:var(--ink-faint);text-align:center;padding:8px 0;border-top:1px solid var(--rule-light);margin-top:16px">\
+  &copy; 2026 Centre for Applied AI and Future of Work. CC BY-NC 4.0. \
+  Commercial use requires a licence \'97 <a href="mailto:hello@caafw.org" style="color:var(--oxford)">hello@caafw.org</a>\
+</div>\
+</body>\
+</html>\
+}
